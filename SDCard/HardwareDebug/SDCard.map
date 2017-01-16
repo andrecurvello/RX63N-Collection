@@ -1,0 +1,1250 @@
+Renesas Optimizing Linker (W1.00.00 )             16-Jan-2017 22:33:01
+
+*** Options ***
+
+-subcommand=LinkerSubCommand.tmp
+-input="./r_bsp/board/rdkrx63n/dbsct.obj"
+-input="./r_bsp/board/rdkrx63n/hwsetup.obj"
+-input="./r_bsp/board/rdkrx63n/locking.obj"
+-input="./r_bsp/board/rdkrx63n/lowlvl.obj"
+-input="./r_bsp/board/rdkrx63n/lowsrc.obj"
+-input="./r_bsp/board/rdkrx63n/resetprg.obj"
+-input="./r_bsp/board/rdkrx63n/sbrk.obj"
+-input="./r_bsp/board/rdkrx63n/vecttbl.obj"
+-input="./r_bsp/mcu/all/r_bsp_common.obj"
+-input="./r_bsp/mcu/rx63n/cpu.obj"
+-input="./r_bsp/mcu/rx63n/locking.obj"
+-input="./r_bsp/mcu/rx63n/mcu_clocks.obj"
+-input="./r_bsp/mcu/rx63n/mcu_init.obj"
+-input="./r_bsp/mcu/rx63n/mcu_interrupts.obj"
+-input="./r_bsp/mcu/rx63n/mcu_locks.obj"
+-input="./sdcard_driver/cmt/cmt_oneshot.obj"
+-input="./sdcard_driver/fat/ff.obj"
+-input="./sdcard_driver/iostreams/disk_iostreams.obj"
+-input="./sdcard_driver/iostreams/mmc_disk.obj"
+-input="./sdcard_driver/iostreams/r_diskio.obj"
+-input="./sdcard_driver/mmc/mmc_protocol.obj"
+-input="./sdcard_driver/r_rspi_rx/src/r_rspi_rx.obj"
+-input="./src/SDCard.obj"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,C_1,C_2,C,C$*,D*,W*,L,P*/0FFF00000,FIXEDVECT/0FFFFFF80
+-library=C:\Users\Miguel\E2_STU~1\WORKSP~1\SDCard\HARDWA~2\SDCard.lib
+-noprelink
+-list=SDCard.map
+-show
+-nooptimize
+-debug
+-output=C:\Users\Miguel\e2_studio\workspace\SDCard\HardwareDebug\SDCard.abs
+-rom=D=R,D_1=R_1,D_2=R_2
+-nocompress
+-vect=_undefined_interrupt_source_isr
+-nomessage
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SU
+                                  00000004  00001003      1000   4
+SI
+                                  00001004  00001403       400   4
+B_1
+                                  00001404  0000143d        3a   1
+R_1
+                                  0000143e  00001491        54   1
+B_2
+                                  00001492  0000149b         a   2
+R_2
+                                  0000149c  0000149c         0   1
+B
+                                  0000149c  00001d1b       880   4
+R
+                                  00001d1c  000032e3      15c8   4
+C_1
+                                  fff00000  fff000d1        d2   1
+C_2
+                                  fff000d2  fff002d9       208   2
+C
+                                  fff002dc  fff004ef       214   4
+C$DSEC
+                                  fff004f0  fff00513        24   4
+C$BSEC
+                                  fff00514  fff0052b        18   4
+C$VECT
+                                  fff0052c  fff0092b       400   4
+D
+                                  fff0092c  fff01ef3      15c8   4
+D_1
+                                  fff01ef4  fff01f47        54   1
+D_2
+                                  fff01f48  fff01f48         0   1
+W
+                                  fff01f48  fff01f48         0   1
+W_1
+                                  fff01f48  fff01f48         0   1
+W_2
+                                  fff01f48  fff01f48         0   1
+L
+                                  fff01f48  fff02068       121   4
+P
+                                  fff02069  fff079ae      5946   1
+FIXEDVECT
+                                  ffffff80  ffffffff        80   4
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=SU
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  00000004  00001003      1000
+
+SECTION=SI
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  00001004  00001403       400
+
+SECTION=B_1
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  00001404  0000142b        28
+  _flmod
+                                  00001404        14   data ,g         3
+  _sml_buf
+                                  00001418        14   data ,g         0
+FILE=.\sdcard_driver\mmc\mmc_protocol.obj
+                                  0000142c  0000143d        12
+  _g_CSDregister
+                                  0000142c        10   data ,l         2
+  _g_mmc_delay
+                                  0000143c         1   data ,l         2
+  _g_SDCard_type
+                                  0000143d         1   data ,l         3
+
+SECTION=R_1
+FILE=.\sdcard_driver\r_rspi_rx\src\r_rspi_rx.obj
+                                  0000143e  00001440         3
+  _rspi_initialized
+                                  0000143e         3   data ,l         1
+FILE=xfiles
+                                  00001441  00001490        50
+  _ebuf
+                                  00001441        50   data ,l         5
+FILE=xstate
+                                  00001491  00001491         1
+  __Mbcurmax
+                                  00001491         1   data ,g         1
+
+SECTION=B_2
+FILE=.\r_bsp\mcu\rx63n\cpu.obj
+                                  00001492  00001499         8
+  _g_protect_counters
+                                  00001492         8   data ,l         3
+FILE=.\sdcard_driver\fat\ff.obj
+                                  0000149a  0000149b         2
+  _Fsid
+                                  0000149a         2   data ,l         1
+
+SECTION=B
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  0000149c  000014eb        50
+  __Files
+                                  0000149c        50   data ,g         4
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  000014ec  000018eb       400
+  _heap_area
+                                  000014ec       400   data ,l         2
+FILE=.\r_bsp\mcu\rx63n\mcu_interrupts.obj
+                                  000018ec  00001917        2c
+  _g_bsp_vectors
+                                  000018ec        2c   data ,l         4
+FILE=.\r_bsp\mcu\rx63n\mcu_locks.obj
+                                  00001918  00001aaf       198
+  _g_bsp_Locks
+                                  00001918       198   data ,g         2
+FILE=.\sdcard_driver\fat\ff.obj
+                                  00001ab0  00001ab7         8
+  _FatFs
+                                  00001ab0         8   data ,l         2
+FILE=.\sdcard_driver\iostreams\mmc_disk.obj
+                                  00001ab8  00001ce7       230
+  _g_mmc_fatfs
+                                  00001ab8       230   data ,l         1
+FILE=.\sdcard_driver\mmc\mmc_protocol.obj
+                                  00001ce8  00001d0b        24
+  _g_CSDvalues
+                                  00001ce8        24   data ,g         4
+FILE=.\sdcard_driver\r_rspi_rx\src\r_rspi_rx.obj
+                                  00001d0c  00001d17         c
+  _g_rspi_locks
+                                  00001d0c         c   data ,g         1
+FILE=_errno
+                                  00001d18  00001d1b         4
+  __errno
+                                  00001d18         4   data ,g         3
+
+SECTION=R
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  00001d1c  00001d2f        14
+  _env_list
+                                  00001d1c        10   data ,g         1
+  _environ
+                                  00001d2c         4   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  00001d30  00001d33         4
+  _brk
+                                  00001d30         4   data ,l         1
+FILE=.\sdcard_driver\cmt\cmt_oneshot.obj
+                                  00001d34  00001d37         4
+  _cmt_callback
+                                  00001d34         4   data ,g         2
+FILE=.\sdcard_driver\iostreams\disk_iostreams.obj
+                                  00001d38  00003057      1320
+  _g_OpenFilesList
+                                  00001d38      1320   data ,g         6
+FILE=.\sdcard_driver\iostreams\mmc_disk.obj
+                                  00003058  0000306f        18
+  _g_mmc_fs_driver
+                                  00003058        18   data ,l         1
+FILE=.\sdcard_driver\iostreams\r_diskio.obj
+                                  00003070  0000307f        10
+  _g_disk_driver_list
+                                  00003070        10   data ,g         6
+FILE=.\sdcard_driver\r_rspi_rx\src\r_rspi_rx.obj
+                                  00003080  00003097        18
+  _g_rspi_locked_id
+                                  00003080         c   data ,l         3
+  _g_rspi_channels
+                                  0000308c         c   data ,g         5
+FILE=xfiles
+                                  00003098  0000316f        d8
+  __Stdin
+                                  00003098        48   data ,g         8
+  __Stdout
+                                  000030e0        48   data ,g         9
+  __Stderr
+                                  00003128        48   data ,g         4
+FILE=xprintf
+                                  00003170  00003173         4
+  _stderr
+                                  00003170         4   data ,g         0
+FILE=xctype
+                                  00003174  0000317b         8
+  __Ctype
+                                  00003174         4   data ,g         2
+  __Tls_setup__Ctype
+                                  00003178         4   data ,g         1
+FILE=malloc
+                                  0000317c  00003183         8
+  __Aldata
+                                  0000317c         8   data ,g         3
+FILE=xstate
+                                  00003184  000031cb        48
+  __Tls_setup__Mbcurmax
+                                  00003184         4   data ,g         1
+  __Mbstate
+                                  00003188        40   data ,g         2
+  __Tls_setup__Mbstate
+                                  000031c8         4   data ,g         2
+FILE=localeco
+                                  000031cc  0000321f        54
+  __Locale
+                                  000031cc        50   data ,g         1
+  __Tls_setup__Locale
+                                  0000321c         4   data ,g         0
+FILE=xwcstate
+                                  00003220  00003263        44
+  __Wcstate
+                                  00003220        40   data ,g         2
+  __Tls_setup__Wcstate
+                                  00003260         4   data ,g         2
+FILE=xvalues
+                                  00003264  000032e3        80
+  __Denorm
+                                  00003264        10   data ,g         0
+  __Eps
+                                  00003274        10   data ,g         0
+  __Hugeval
+                                  00003284        10   data ,g         0
+  __Inf
+                                  00003294        10   data ,g         1
+  __Nan
+                                  000032a4        10   data ,g         0
+  __Snan
+                                  000032b4        10   data ,g         0
+  __Rteps
+                                  000032c4        10   data ,g         0
+  __Xbig
+                                  000032d4         8   data ,g         0
+  __Zero
+                                  000032dc         8   data ,g         0
+
+SECTION=C_1
+FILE=xprintf
+                                  fff00000  fff00009         a
+  _fchar$1
+                                  fff00000         a   data ,l         1
+FILE=xputtxt
+                                  fff0000a  fff000ae        a5
+  _spaces
+                                  fff0000a        21   data ,l         1
+  _zeroes
+                                  fff0002b        21   data ,l         1
+  _asterisk
+                                  fff0004c        21   data ,l         1
+  _plus
+                                  fff0006d        21   data ,l         1
+  _minus
+                                  fff0008e        21   data ,l         1
+FILE=xlitob
+                                  fff000af  fff000d0        22
+  _ldigs
+                                  fff000af        11   data ,l         1
+  _udigs
+                                  fff000c0        11   data ,l         1
+FILE=localeco
+                                  fff000d1  fff000d1         1
+  _null
+                                  fff000d1         1   data ,l         d
+
+SECTION=C_2
+FILE=.\r_bsp\mcu\rx63n\cpu.obj
+                                  fff000d2  fff000d7         6
+  _g_prcr_masks
+                                  fff000d2         6   data ,l         2
+FILE=xctype
+                                  fff000d8  fff002d9       202
+  _ctyp_tab
+                                  fff000d8       202   data ,l         1
+
+SECTION=C
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff002dc  fff002f3        18
+  __CTBL
+                                  fff002dc        18   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff002f4  fff002f7         4
+  __nfiles
+                                  fff002f4         4   data ,g         3
+FILE=.\sdcard_driver\mmc\mmc_protocol.obj
+                                  fff002f8  fff00423       12c
+  _sdcmmc_cmdtable
+                                  fff002f8       12c   data ,l         1
+FILE=xfoprep
+                                  fff00424  fff0046b        48
+  _init$1
+                                  fff00424        48   data ,l         1
+FILE=xprintf
+                                  fff0046c  fff00483        18
+  _fbit$2
+                                  fff0046c        18   data ,l         1
+FILE=xputfld
+                                  fff00484  fff00487         4
+  _vpsize$1
+                                  fff00484         4   data ,l         0
+FILE=xfopen
+                                  fff00488  fff00497        10
+  _rwacc$1
+                                  fff00488        10   data ,l         1
+FILE=xvacopy
+                                  fff00498  fff0049b         4
+  _vasize$1
+                                  fff00498         4   data ,l         0
+FILE=xldtob
+                                  fff0049c  fff004e3        48
+  _pows
+                                  fff0049c        48   data ,l         1
+FILE=_sbrk_si
+                                  fff004e4  fff004e7         4
+  __sbrk_size
+                                  fff004e4         4   data ,g         1
+FILE=xwctomb
+                                  fff004e8  fff004ef         8
+  _initial$1
+                                  fff004e8         8   data ,l         0
+
+SECTION=C$DSEC
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff004f0  fff00513        24
+  __DTBL
+                                  fff004f0        24   data ,g         0
+
+SECTION=C$BSEC
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff00514  fff0052b        18
+  __BTBL
+                                  fff00514        18   data ,g         0
+
+SECTION=C$VECT
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  fff0052c  fff0092b       400
+
+SECTION=D
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff0092c  fff0093f        14
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  fff00940  fff00943         4
+FILE=.\sdcard_driver\cmt\cmt_oneshot.obj
+                                  fff00944  fff00947         4
+FILE=.\sdcard_driver\iostreams\disk_iostreams.obj
+                                  fff00948  fff01c67      1320
+FILE=.\sdcard_driver\iostreams\mmc_disk.obj
+                                  fff01c68  fff01c7f        18
+FILE=.\sdcard_driver\iostreams\r_diskio.obj
+                                  fff01c80  fff01c8f        10
+FILE=.\sdcard_driver\r_rspi_rx\src\r_rspi_rx.obj
+                                  fff01c90  fff01ca7        18
+FILE=xfiles
+                                  fff01ca8  fff01d7f        d8
+FILE=xprintf
+                                  fff01d80  fff01d83         4
+FILE=xctype
+                                  fff01d84  fff01d8b         8
+FILE=malloc
+                                  fff01d8c  fff01d93         8
+FILE=xstate
+                                  fff01d94  fff01ddb        48
+FILE=localeco
+                                  fff01ddc  fff01e2f        54
+FILE=xwcstate
+                                  fff01e30  fff01e73        44
+FILE=xvalues
+                                  fff01e74  fff01ef3        80
+
+SECTION=D_1
+FILE=.\sdcard_driver\r_rspi_rx\src\r_rspi_rx.obj
+                                  fff01ef4  fff01ef6         3
+FILE=xfiles
+                                  fff01ef7  fff01f46        50
+FILE=xstate
+                                  fff01f47  fff01f47         1
+
+SECTION=L
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff01f48  fff01f4b         4
+  _deadSpace
+                                  fff01f48         4   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff01f4c  fff01f8d        42
+FILE=.\sdcard_driver\fat\ff.obj
+                                  fff01f90  fff01f9e         f
+FILE=.\src\SDCard.obj
+                                  fff01fa0  fff02029        8a
+FILE=xprintf
+                                  fff0202c  fff02032         7
+FILE=xldtob
+                                  fff02034  fff02055        22
+FILE=xgenld
+                                  fff02058  fff02059         2
+FILE=localeco
+                                  fff0205c  fff02068         d
+
+SECTION=P
+FILE=.\r_bsp\board\rdkrx63n\hwsetup.obj
+                                  fff02069  fff021fe       196
+  _hardware_setup
+                                  fff02069         d   func ,g         1
+  _output_ports_configure
+                                  fff02076       187   func ,l         1
+  _interrupts_configure
+                                  fff021fd         1   func ,l         1
+  _peripheral_modules_enable
+                                  fff021fe         1   func ,l         1
+FILE=.\r_bsp\board\rdkrx63n\locking.obj
+                                  fff021ff  fff02218        1a
+  _R_BSP_Lock
+                                  fff021ff        14   func ,g         1
+  _R_BSP_Unlock
+                                  fff02213         6   func ,g         1
+FILE=.\r_bsp\board\rdkrx63n\lowlvl.obj
+                                  fff02219  fff0223e        26
+  _charput
+                                  fff02219        13   func ,g         1
+  _charget
+                                  fff0222c        13   func ,g         1
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff0223f  fff023bb       17d
+  __INIT_IOLIB
+                                  fff0223f        75   func ,g         1
+  __CLOSEALL
+                                  fff022b4        21   func ,g         1
+  _open
+                                  fff022d5        67   func ,g         1
+  _close
+                                  fff0233c         3   func ,g         1
+  _write
+                                  fff0233f        3e   func ,g         1
+  _read
+                                  fff0237d        3b   func ,g         0
+  _lseek
+                                  fff023b8         4   func ,g         0
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  fff023bc  fff024b4        f9
+  _PowerON_Reset_PC
+                                  fff023bc        56   entry,g         1
+  _operating_frequency_set
+                                  fff02412        39   func ,l         1
+  _clock_source_select
+                                  fff0244b        6a   func ,l         1
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  fff024b5  fff024d5        21
+  _sbrk
+                                  fff024b5        21   func ,g         1
+FILE=.\r_bsp\board\rdkrx63n\vecttbl.obj
+                                  fff024d6  fff025d9       104
+  _excep_supervisor_inst_isr
+                                  fff024d6        18   func ,g         1
+  _excep_undefined_inst_isr
+                                  fff024ee        18   func ,g         1
+  _excep_floating_point_isr
+                                  fff02506        22   func ,g         1
+  _non_maskable_isr
+                                  fff02528        7b   func ,g         1
+  _undefined_interrupt_source_isr
+                                  fff025a3        18   func ,g         7
+  _bus_error_isr
+                                  fff025bb        1f   func ,g         0
+FILE=.\r_bsp\mcu\all\r_bsp_common.obj
+                                  fff025da  fff026af        d6
+  _R_BSP_GetVersion
+                                  fff025da         6   func ,g         0
+  _R_BSP_GetIClkFreqHz
+                                  fff025e0         4   func ,g         1
+  _R_BSP_SoftwareDelay
+                                  fff025e4        cc   func ,g         0
+FILE=.\r_bsp\mcu\rx63n\cpu.obj
+                                  fff026b0  fff02775        c6
+  _R_BSP_InterruptsDisable
+                                  fff026b0         3   func ,g         0
+  _R_BSP_InterruptsEnable
+                                  fff026b3         3   func ,g         0
+  _R_BSP_CpuInterruptLevelRead
+                                  fff026b6         9   func ,g         0
+  _R_BSP_CpuInterruptLevelWrite
+                                  fff026bf        1d   func ,g         0
+  _R_BSP_RegisterProtectEnable
+                                  fff026dc        47   func ,g         1
+  _R_BSP_RegisterProtectDisable
+                                  fff02723        41   func ,g         1
+  _bsp_register_protect_open
+                                  fff02764        12   func ,g         1
+FILE=.\r_bsp\mcu\rx63n\locking.obj
+                                  fff02776  fff027ab        36
+  _R_BSP_SoftwareLock
+                                  fff02776        14   func ,g         1
+  _R_BSP_SoftwareUnlock
+                                  fff0278a         6   func ,g         1
+  _R_BSP_HardwareLock
+                                  fff02790         e   func ,g         0
+  _R_BSP_HardwareUnlock
+                                  fff0279e         e   func ,g         0
+FILE=.\r_bsp\mcu\rx63n\mcu_clocks.obj
+                                  fff027ac  fff02815        6a
+  _get_iclk_freq_hz
+                                  fff027ac        6a   func ,g         1
+FILE=.\r_bsp\mcu\rx63n\mcu_init.obj
+                                  fff02816  fff028b3        9e
+  _bsp_non_existent_port_init
+                                  fff02816        9e   func ,g         1
+FILE=.\r_bsp\mcu\rx63n\mcu_interrupts.obj
+                                  fff028b4  fff029ab        f8
+  _bsp_interrupt_open
+                                  fff028b4        16   func ,g         1
+  _R_BSP_InterruptWrite
+                                  fff028ca        1c   func ,g         0
+  _R_BSP_InterruptRead
+                                  fff028e6        1b   func ,g         0
+  _R_BSP_InterruptControl
+                                  fff02901        3f   func ,g         c
+  _bsp_interrupt_enable_disable
+                                  fff02940        6c   func ,g         2
+FILE=.\sdcard_driver\cmt\cmt_oneshot.obj
+                                  fff029ac  fff02a62        b7
+  _cmt_callback_set
+                                  fff029ac         9   func ,g         1
+  _cmt_init
+                                  fff029b5        4f   func ,g         1
+  _cmt_start
+                                  fff02a04        26   func ,g         1
+  _cmt_stop
+                                  fff02a2a        1d   func ,g         1
+  _CMT_isr
+                                  fff02a47        1c   func ,l         0
+FILE=.\sdcard_driver\fat\ff.obj
+                                  fff02a63  fff0434a      18e8
+  _mem_cpy
+                                  fff02a63        11   func ,l         a
+  _mem_set
+                                  fff02a74         e   func ,l         7
+  _mem_cmp
+                                  fff02a82        1a   func ,l         1
+  _chk_chr
+                                  fff02a9c         d   func ,l         1
+  _move_window
+                                  fff02aa9        78   func ,l        16
+  _sync
+                                  fff02b21        bf   func ,l         6
+  _clust2sect
+                                  fff02be0        17   func ,g         8
+  _get_fat
+                                  fff02bf7        e4   func ,g         9
+  _put_fat
+                                  fff02cdb       10d   func ,g         4
+  _remove_chain
+                                  fff02de8        5e   func ,l         5
+  _create_chain
+                                  fff02e46        b1   func ,l         6
+  _dir_sdi
+                                  fff02ef7        85   func ,l         7
+  _dir_next
+                                  fff02f7c       101   func ,l         4
+  _ld_clust
+                                  fff0307d        1c   func ,l         7
+  _st_clust
+                                  fff03099        11   func ,l         6
+  _dir_find
+                                  fff030aa        49   func ,l         1
+  _dir_read
+                                  fff030f3        48   func ,l         2
+  _dir_register
+                                  fff0313b        65   func ,l         3
+  _dir_remove
+                                  fff031a0        25   func ,l         2
+  _create_name
+                                  fff031c5       13b   func ,l         1
+  _get_fileinfo
+                                  fff03300        78   func ,l         2
+  _follow_path
+                                  fff03378        67   func ,l         9
+  _check_fs
+                                  fff033df        63   func ,l         2
+  _chk_mounted
+                                  fff03442       2c4   func ,l         9
+  _validate
+                                  fff03706        24   func ,l         6
+  _f_mount
+                                  fff0372a        22   func ,g         1
+  _f_open
+                                  fff0374c       13d   func ,g         1
+  _f_read
+                                  fff03889       166   func ,g         1
+  _f_write
+                                  fff039ef       189   func ,g         1
+  _f_sync
+                                  fff03b78        84   func ,g         1
+  _f_close
+                                  fff03bfc        10   func ,g         1
+  _f_lseek
+                                  fff03c0c       144   func ,g         3
+  _f_opendir
+                                  fff03d50        67   func ,g         1
+  _f_readdir
+                                  fff03db7        48   func ,g         1
+  _f_stat
+                                  fff03dff        3e   func ,g         0
+  _f_getfree
+                                  fff03e3d        ce   func ,g         0
+  _f_truncate
+                                  fff03f0b        8e   func ,g         0
+  _f_unlink
+                                  fff03f99        b2   func ,g         0
+  _f_mkdir
+                                  fff0404b       167   func ,g         0
+  _f_chmod
+                                  fff041b2        53   func ,g         0
+  _f_utime
+                                  fff04205        51   func ,g         0
+  _f_rename
+                                  fff04256        f5   func ,g         0
+FILE=.\sdcard_driver\iostreams\disk_iostreams.obj
+                                  fff0434b  fff04501       1b7
+  _ios_disk_open
+                                  fff0434b        82   func ,g         0
+  _ios_disk_write
+                                  fff043cd        3f   func ,g         0
+  _ios_disk_read
+                                  fff0440c        32   func ,g         0
+  _ios_disk_close
+                                  fff0443e        31   func ,g         0
+  _ios_disk_lseek
+                                  fff0446f        93   func ,g         0
+FILE=.\sdcard_driver\iostreams\mmc_disk.obj
+                                  fff04502  fff0465e       15d
+  _R_MmcDiskInit
+                                  fff04502         5   func ,g         1
+  _sdcard_get_sector_size
+                                  fff04507        1d   func ,l         1
+  _sdcard_get_num_blocks
+                                  fff04524        28   func ,l         1
+  _sdcard_compute_size
+                                  fff0454c        37   func ,l         1
+  _sdcard_disk_read
+                                  fff04583        2f   func ,l         1
+  _sdcard_disk_write
+                                  fff045b2        33   func ,l         1
+  _sdcard_disk_initialize
+                                  fff045e5         a   func ,l         1
+  _sdcard_disk_status
+                                  fff045ef         3   func ,l         1
+  _sdcard_disk_ioctl
+                                  fff045f2        23   func ,l         1
+  _sdcard_register_my_driver
+                                  fff04615        3a   func ,l         1
+  _R_SdCardDiskMount
+                                  fff0464f        10   func ,g         1
+FILE=.\sdcard_driver\iostreams\r_diskio.obj
+                                  fff0465f  fff046d7        79
+  _r_disk_initialize
+                                  fff0465f         e   func ,g         1
+  _r_disk_read
+                                  fff0466d         e   func ,g         1
+  _r_disk_write
+                                  fff0467b         e   func ,g         1
+  _r_disk_ioctl
+                                  fff04689         e   func ,g         1
+  _r_disk_status
+                                  fff04697         e   func ,g         1
+  _r_get_fattime
+                                  fff046a5         1   func ,l         1
+  _disk_initialize
+                                  fff046a6         9   func ,g         1
+  _disk_status
+                                  fff046af         9   func ,g         2
+  _disk_read
+                                  fff046b8         a   func ,g         7
+  _disk_write
+                                  fff046c2         a   func ,g         8
+  _disk_ioctl
+                                  fff046cc         a   func ,g         1
+  _get_fattime
+                                  fff046d6         2   func ,g         3
+FILE=.\sdcard_driver\mmc\mmc_protocol.obj
+                                  fff046d8  fff04df4       71d
+  _R_SdCardSlotInit
+                                  fff046d8        19   func ,g         3
+  _mmc_crc_read
+                                  fff046f1        29   func ,l         1
+  _mmc_crc_send
+                                  fff0471a        29   func ,l         1
+  _mmc_send_8_clocks
+                                  fff04743        14   func ,l         5
+  _mmc_read_byte
+                                  fff04757        13   func ,l         e
+  _sdcard_command_send
+                                  fff0476a       153   func ,l         a
+  _sdcard_read_CSD
+                                  fff048bd        e5   func ,l         1
+  _R_SdcSectorRead
+                                  fff049a2        97   func ,g         1
+  _R_SdcBlockWrite
+                                  fff04a39        9f   func ,g         1
+  _sdcard_media_init
+                                  fff04ad8       1b6   func ,l         1
+  _sdcard_decode_CSD
+                                  fff04c8e       11e   func ,l         1
+  _rspi_clock_set_rate
+                                  fff04dac         a   func ,l         c
+  _mmc_delayCB
+                                  fff04db6         a   func ,l         1
+  _mmc_delay
+                                  fff04dc0        35   func ,l         2
+FILE=.\sdcard_driver\r_rspi_rx\src\r_rspi_rx.obj
+                                  fff04df5  fff05179       385
+  _R_RSPI_Init
+                                  fff04df5        ec   func ,g         1
+  _R_RSPI_Select
+                                  fff04ee1        48   func ,g         3
+  _R_RSPI_Deselect
+                                  fff04f29        48   func ,g         b
+  _R_RSPI_BaudRateSet
+                                  fff04f71        26   func ,g         1
+  _R_RSPI_SendReceive
+                                  fff04f97        94   func ,g         0
+  _R_RSPI_Read
+                                  fff0502b        77   func ,g         2
+  _R_RSPI_Write
+                                  fff050a2        77   func ,g        13
+  _R_RSPI_Lock
+                                  fff05119        3b   func ,g         0
+  _R_RSPI_Unlock
+                                  fff05154        17   func ,g         0
+  _R_RSPI_CheckLock
+                                  fff0516b         f   func ,g         6
+FILE=.\src\SDCard.obj
+                                  fff0517a  fff05208        8f
+  _main
+                                  fff0517a        8f   func ,g         1
+FILE=freopen
+                                  fff05209  fff05237        2f
+  _freopen
+                                  fff05209        2f   func ,g         3
+FILE=fclose
+                                  fff05238  fff0528b        54
+  _fclose
+                                  fff05238        54   func ,g         4
+FILE=printf
+                                  fff0528c  fff052ca        3f
+  _prout
+                                  fff0528c        1d   func ,l         1
+  _printf
+                                  fff052a9        22   func ,g         3
+FILE=__COM_DIV64u
+                                  fff052cb  fff05363        99
+  __COM_DIV64u
+                                  fff052cb         0   none ,g         4
+  _Loop_Init
+                                  fff052d5         0   none ,l         2
+  _Loop
+                                  fff052dd         0   none ,l         1
+  _DivStart
+                                  fff052e9         0   none ,l         3
+  _Success
+                                  fff052f7         0   none ,l         1
+  _DivEnd
+                                  fff05303         0   none ,l         0
+  IXI6DIV
+                                  fff05308         0   none ,l         1
+  IXI4DIV
+                                  fff0531a         0   none ,l         1
+  IXI2DIV
+                                  fff0532a         0   none ,l         1
+  I8I2DIV
+                                  fff05332         0   none ,l         1
+  I4I2DIV
+                                  fff05360         0   none ,l         1
+  _i8divU_End
+                                  fff05363         0   none ,l         0
+FILE=__initsct
+                                  fff05364  fff053ad        4a
+  __INITSCT
+                                  fff05364         0   none ,g         1
+  loop1
+                                  fff05376         0   none ,l         1
+  next_loop1
+                                  fff05384         0   none ,l         2
+  loop3
+                                  fff05396         0   none ,l         1
+  next_loop3
+                                  fff053a7         0   none ,l         2
+FILE=fwrite
+                                  fff053ae  fff0547e        d1
+  _fwrite
+                                  fff053ae        d1   func ,g         1
+FILE=fflush
+                                  fff0547f  fff05506        88
+  _fflush
+                                  fff0547f        88   func ,g         5
+FILE=xfoprep
+                                  fff05507  fff055e5        df
+  __Foprep
+                                  fff05507        df   func ,g         1
+FILE=xfofind
+                                  fff055e6  fff05673        8e
+  __Fofind
+                                  fff055e6        45   func ,g         0
+  __Fofree
+                                  fff0562b        49   func ,g         2
+FILE=xprintf
+                                  fff05674  fff058ea       277
+  __Printf
+                                  fff05674       277   func ,g         1
+FILE=free
+                                  fff058eb  fff0596d        83
+  _free
+                                  fff058eb        83   func ,g         4
+FILE=xfwprep
+                                  fff0596e  fff05a06        99
+  __Fwprep
+                                  fff0596e        99   func ,g         1
+FILE=xputfld
+                                  fff05a07  fff05e97       491
+  __Putfld
+                                  fff05a07       491   func ,g         1
+FILE=xfopen
+                                  fff05e98  fff05ec7        30
+  __Fopen
+                                  fff05e98        30   func ,g         1
+FILE=xvacopy
+                                  fff05ec8  fff05ecf         8
+  __Vacopy
+                                  fff05ec8         8   func ,g         2
+FILE=xputtxt
+                                  fff05ed0  fff061b2       2e3
+  __Puttxt
+                                  fff05ed0       2e3   func ,g         3
+FILE=strchr
+                                  fff061b3  fff061c9        17
+  _strchr
+                                  fff061b3        17   func ,g         2
+FILE=xctype
+                                  fff061ca  fff061df        16
+  __Getpctype
+                                  fff061ca        16   func ,g         0
+FILE=malloc
+                                  fff061e0  fff062bd        de
+  _findmem
+                                  fff061e0        7b   func ,l         1
+  _malloc
+                                  fff0625b        63   func ,g         3
+FILE=xldtob
+                                  fff062be  fff067aa       4ed
+  __Ldtob
+                                  fff062be       4ed   func ,g         1
+FILE=xputstr
+                                  fff067ab  fff06888        de
+  __Putstr
+                                  fff067ab        de   func ,g         1
+FILE=xlitob
+                                  fff06889  fff069a7       11f
+  __Litob
+                                  fff06889       11f   func ,g         1
+FILE=xgetmem
+                                  fff069a8  fff069bf        18
+  __Getmem
+                                  fff069a8        18   func ,g         1
+FILE=xgenld
+                                  fff069c0  fff06c75       2b6
+  __Genld
+                                  fff069c0       2b6   func ,g         1
+FILE=xwctomb
+                                  fff06c76  fff06dd9       164
+  __Wctombx
+                                  fff06c76       11d   func ,g         1
+  __Wctomb
+                                  fff06d93        47   func ,g         1
+FILE=xstate
+                                  fff06dda  fff06e0b        32
+  __Getmbcurmax
+                                  fff06dda        16   func ,g         2
+  __Getpmbstate
+                                  fff06df0        1c   func ,g         0
+FILE=xldscale
+                                  fff06e0c  fff06e0f         4
+  __LDscale
+                                  fff06e0c         4   func ,g         1
+FILE=xldunsca
+                                  fff06e10  fff06e13         4
+  __LDunscale
+                                  fff06e10         4   func ,g         1
+FILE=__COM_DIVd
+                                  fff06e14  fff06ff0       1dd
+  exception1
+                                  fff06e14         0   none ,l         1
+  exception2
+                                  fff06e23         0   none ,l         1
+  exception3
+                                  fff06e2b         0   none ,l         1
+  normalize1
+                                  fff06e3e         0   none ,l         1
+  p1_norm_loop
+                                  fff06e49         0   none ,l         1
+  exception4
+                                  fff06e7f         0   none ,l         1
+  normalize2
+                                  fff06e85         0   none ,l         0
+  p2_norm_loop
+                                  fff06e90         0   none ,l         1
+  return_zero
+                                  fff06ebd         0   none ,l         4
+  return_inf
+                                  fff06ec8         0   none ,l         3
+  return_NaN
+                                  fff06edb         0   none ,l         4
+  __COM_DIVd
+                                  fff06ee6         0   none ,g         1
+  exception_return3
+                                  fff06f1a         0   none ,l         5
+  exception_return4
+                                  fff06f1f         0   none ,l         5
+  div_loop
+                                  fff06f40         0   none ,l         2
+  man_sub
+                                  fff06f53         0   none ,l         1
+  over_sub
+                                  fff06f5e         0   none ,l         1
+  end_man_cal
+                                  fff06f66         0   none ,l         1
+  end_sticky_cal
+                                  fff06f6b         0   none ,l         1
+  end_norm
+                                  fff06f79         0   none ,l         1
+  denormalize_loop
+                                  fff06f86         0   none ,l         1
+  next_loop
+                                  fff06f8e         0   none ,l         1
+  round_denormal
+                                  fff06f96         0   none ,l         1
+  end_round_d
+                                  fff06fb0         0   none ,l         4
+  end_denormal
+                                  fff06fb2         0   none ,l         1
+  end_denormal_0
+                                  fff06fc2         0   none ,l         1
+  return_value
+                                  fff06fd0         0   none ,l         1
+  end_round
+                                  fff06fd0         0   none ,l         3
+  return
+                                  fff06fea         0   none ,l         0
+FILE=__COM_MOD64u
+                                  fff06ff1  fff07077        87
+  __COM_MOD64u
+                                  fff06ff1         0   none ,g         1
+  _Loop_Init
+                                  fff06ffb         0   none ,l         2
+  _Loop
+                                  fff06fff         0   none ,l         1
+  _DivStart
+                                  fff0700b         0   none ,l         3
+  _Success
+                                  fff07019         0   none ,l         1
+  _DivEnd
+                                  fff07021         0   none ,l         0
+  IXI6DIV
+                                  fff07022         0   none ,l         1
+  IXI4DIV
+                                  fff07034         0   none ,l         1
+  IXI2DIV
+                                  fff07044         0   none ,l         1
+  I8I2DIV
+                                  fff0704c         0   none ,l         1
+  I4I2DIV
+                                  fff0706c         0   none ,l         1
+FILE=_div
+                                  fff07078  fff07083         c
+  _ldiv
+                                  fff07078         0   none ,g         1
+  _div
+                                  fff07078         0   none ,g         1
+FILE=__COM_ADDd_SUBd
+                                  fff07084  fff072f8       275
+  __COM_SUBd
+                                  fff07084         0   none ,g         2
+  __COM_ADDd
+                                  fff0708b         0   none ,g         0
+  non_swap
+                                  fff070ac         0   none ,l         1
+  swap
+                                  fff070af         0   none ,l         2
+  swap_end
+                                  fff070b5         0   none ,l         1
+  x_normal
+                                  fff070d8         0   none ,l         1
+  shift_more_than_32
+                                  fff0711d         0   none ,l         1
+  set_sticky
+                                  fff0713e         0   none ,l         1
+  after_shift
+                                  fff07145         0   none ,l         2
+  round1
+                                  fff0715c         0   none ,l         6
+  round_end
+                                  fff07173         0   none ,l         2
+  return
+                                  fff0718c         0   none ,l         2
+  return_x_asis
+                                  fff0718f         0   none ,l         1
+  pack
+                                  fff0719c         0   none ,l         6
+  inf_or_nan
+                                  fff071a9         0   none ,l         1
+  return_nan
+                                  fff071bb         0   none ,l         1
+  zero_or_den
+                                  fff071c6         0   none ,l         1
+  add_ovf
+                                  fff071e2         0   none ,l         1
+  subtract
+                                  fff07202         0   none ,l         1
+  sub_underflow
+                                  fff07217         0   none ,l         2
+  normalize1
+                                  fff0722a         0   none ,l         1
+  normalize2
+                                  fff0723e         0   none ,l         1
+  normalize3
+                                  fff07252         0   none ,l         1
+  normalize4
+                                  fff07265         0   none ,l         1
+  normalize5
+                                  fff07273         0   none ,l         1
+  den_shift_more_than_32
+                                  fff0729b         0   none ,l         1
+  shift_end
+                                  fff072ab         0   none ,l         1
+  sub_underflow1
+                                  fff072b0         0   none ,l         1
+  denormal
+                                  fff072c9         0   none ,l         1
+  x_normal_preparation
+                                  fff072e0         0   none ,l         1
+  den_add
+                                  fff072e7         0   none ,l         1
+FILE=__COM_CMPGTd
+                                  fff072f9  fff0736c        74
+  __COM_CMPGTd
+                                  fff072f9         0   none ,g         2
+  exception_return1
+                                  fff07319         0   none ,l         1
+  exception_return2
+                                  fff0731d         0   none ,l         1
+  exception_return3
+                                  fff07321         0   none ,l         3
+  minus
+                                  fff07337         0   none ,l         1
+  sign_def
+                                  fff07342         0   none ,l         1
+  exception1
+                                  fff0734a         0   none ,l         1
+  exception2
+                                  fff07353         0   none ,l         1
+  exception3
+                                  fff0735c         0   none ,l         1
+FILE=__COM_CMPLEd
+                                  fff0736d  fff073e4        78
+  __COM_CMPLEd
+                                  fff0736d         0   none ,g         3
+  exception_return1
+                                  fff0738d         0   none ,l         1
+  exception_return2
+                                  fff07391         0   none ,l         1
+  exception_return3
+                                  fff07395         0   none ,l         3
+  minus
+                                  fff073ac         0   none ,l         1
+  sign_def
+                                  fff073ba         0   none ,l         1
+  return
+                                  fff073bf         0   none ,l         0
+  exception1
+                                  fff073c2         0   none ,l         1
+  exception2
+                                  fff073cb         0   none ,l         1
+  exception3
+                                  fff073d4         0   none ,l         1
+FILE=__COM_CONV32sd
+                                  fff073e5  fff07442        5e
+  __COM_CONV32sd
+                                  fff073e5         0   none ,g         2
+  exponent_set
+                                  fff073f2         0   none ,l         1
+  count_upper_24
+                                  fff07408         0   none ,l         1
+  count_upper_28
+                                  fff07410         0   none ,l         1
+  count_upper_30
+                                  fff07418         0   none ,l         1
+  result
+                                  fff07420         0   none ,l         1
+  nlz_count_exit
+                                  fff0742a         0   none ,l         1
+  round1
+                                  fff0742f         0   none ,l         1
+  pack
+                                  fff07431         0   none ,l         0
+  return
+                                  fff0743f         0   none ,l         0
+  return_zero
+                                  fff07440         0   none ,l         1
+FILE=__COM_CONVd32
+                                  fff07443  fff074ca        88
+  __COM_CONVd32u
+                                  fff07443         0   none ,g         0
+  __COM_CONVd32s
+                                  fff07446         0   none ,g         2
+  unpack
+                                  fff07449         0   none ,l         1
+  r_shift
+                                  fff07496         0   none ,l         1
+  end_shift
+                                  fff0749b         0   none ,l         1
+  return
+                                  fff074a3         0   none ,l         4
+  return_zero
+                                  fff074a4         0   none ,l         1
+  return_max_min
+                                  fff074a7         0   none ,l         1
+  return_unsigned
+                                  fff074bd         0   none ,l         2
+FILE=__COM_MULd
+                                  fff074cb  fff076bb       1f1
+  __COM_MULd
+                                  fff074cb         0   none ,g         3
+  non_swap
+                                  fff074e8         0   none ,l         1
+  swap
+                                  fff074e9         0   none ,l         2
+  swap_end
+                                  fff074ef         0   none ,l         1
+  x_normal
+                                  fff07512         0   none ,l         1
+  after_mul_ovf_adjust
+                                  fff0758c         0   none ,l         1
+  round1
+                                  fff07599         0   none ,l         1
+  round_end
+                                  fff075a7         0   none ,l         2
+  return
+                                  fff075c0         0   none ,l         0
+  reflect_sign
+                                  fff075c3         0   none ,l         0
+  inf_or_nan
+                                  fff075cc         0   none ,l         1
+  return_inf
+                                  fff075d6         0   none ,l         1
+  return_nan
+                                  fff075e4         0   none ,l         2
+  zero_or_den
+                                  fff075ef         0   none ,l         1
+  return_zero
+                                  fff075f5         0   none ,l         2
+  denormal
+                                  fff07600         0   none ,l         1
+  normalize2
+                                  fff07618         0   none ,l         2
+  normalize3
+                                  fff0762a         0   none ,l         1
+  normalize4
+                                  fff0763d         0   none ,l         1
+  normalize5
+                                  fff07651         0   none ,l         1
+  normalize6
+                                  fff07664         0   none ,l         1
+  normalize7
+                                  fff07672         0   none ,l         1
+  return_denormal
+                                  fff07675         0   none ,l         1
+  after_shift_32
+                                  fff07693         0   none ,l         1
+FILE=localeco
+                                  fff076bc  fff076c2         7
+  _localeconv
+                                  fff076bc         7   func ,g         1
+FILE=xwcstate
+                                  fff076c3  fff076de        1c
+  __Getpwcstate
+                                  fff076c3        1c   func ,g         0
+FILE=xdscale
+                                  fff076df  fff0787a       19c
+  __Dscale
+                                  fff076df       19c   func ,g         1
+FILE=xdunscal
+                                  fff0787b  fff078e4        6a
+  __Dunscale
+                                  fff0787b        6a   func ,g         1
+FILE=xdnorm
+                                  fff078e5  fff079ae        ca
+  __Dnorm
+                                  fff078e5        ca   func ,g         2
+
+SECTION=FIXEDVECT
+FILE=.\r_bsp\board\rdkrx63n\vecttbl.obj
+                                  ffffff80  ffffffff        80
+  _Fixed_Vectors
+                                  ffffff80        80   data ,g         0
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
