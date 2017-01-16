@@ -28,22 +28,22 @@ void main(void) {
 	lcd_clear();
 
 	/* Initialize RTC: */
-	rtc_init_t rtc_init = {
+#if !UPDATE_TIME
+	rtc_init();
+#endif
+
+	rtc_init_t rtc_init_cfg = {
 		.p_callback        = rtc_callback,
 		.output_freq       = RTC_OUTPUT_OFF,
-		.periodic_freq     = RTC_PERIODIC_1_HZ,
+		.periodic_freq     = RTC_PERIODIC_2_HZ,
 		.periodic_priority = 7,
-#if UPDATE_TIME
-		.set_time          = true
-#else
-		.set_time          = false
-#endif
+		.set_time          = UPDATE_TIME
 	};
 
 	tm_t init_time = {
 		00,  /* Seconds (0-59) */
-		03,  /* Minute (0-59) */
-		14,  /* Hour (0-23) */
+		04,  /* Minute (0-59) */
+		18,  /* Hour (0-23) */
 		16,  /* Day of the month (1-31) */
 		0,   /* Month (0-11, 0=January) */
 		117, /* Year since 1900 */
@@ -51,6 +51,6 @@ void main(void) {
 		16,  /* Day of the year (0-365) */
 		0    /* Daylight Savings enabled (>0), disabled (=0), or unknown (<0)*/
 	};
-	printf("Initializing RTC: %d\n", R_RTC_Open(&rtc_init, &init_time));
+	printf("Initializing RTC: %d\n", R_RTC_Open(&rtc_init_cfg, &init_time));
 	for(;;);
 }
