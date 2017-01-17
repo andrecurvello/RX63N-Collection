@@ -1,0 +1,3285 @@
+Renesas Optimizing Linker (W1.00.00 )             17-Jan-2017 01:53:08
+
+*** Options ***
+
+-subcommand=LinkerSubCommand.tmp
+-input="./r_bsp/board/rdkrx63n/dbsct.obj"
+-input="./r_bsp/board/rdkrx63n/hwsetup.obj"
+-input="./r_bsp/board/rdkrx63n/lowlvl.obj"
+-input="./r_bsp/board/rdkrx63n/lowsrc.obj"
+-input="./r_bsp/board/rdkrx63n/resetprg.obj"
+-input="./r_bsp/board/rdkrx63n/sbrk.obj"
+-input="./r_bsp/board/rdkrx63n/vecttbl.obj"
+-input="./r_bsp/mcu/all/r_bsp_common.obj"
+-input="./r_bsp/mcu/rx63n/cpu.obj"
+-input="./r_bsp/mcu/rx63n/locking.obj"
+-input="./r_bsp/mcu/rx63n/mcu_clocks.obj"
+-input="./r_bsp/mcu/rx63n/mcu_init.obj"
+-input="./r_bsp/mcu/rx63n/mcu_interrupts.obj"
+-input="./r_bsp/mcu/rx63n/mcu_locks.obj"
+-input="./r_cmt_rx/src/r_cmt_rx.obj"
+-input="./r_glyph/lcd.obj"
+-input="./r_glyph/src/glyph/drivers/st7579_lcd.obj"
+-input="./r_glyph/src/glyph/fonts/bitmap_font.obj"
+-input="./r_glyph/src/glyph/fonts/font_8x16.obj"
+-input="./r_glyph/src/glyph/fonts/font_8x8.obj"
+-input="./r_glyph/src/glyph/fonts/font_helvr10.obj"
+-input="./r_glyph/src/glyph/fonts/font_winfreesystem14x16.obj"
+-input="./r_glyph/src/glyph/fonts/font_x5x7.obj"
+-input="./r_glyph/src/glyph/fonts/font_x6x13.obj"
+-input="./r_glyph/src/glyph/glyph.obj"
+-input="./r_glyph/src/r_glyph.obj"
+-input="./r_glyph/src/r_glyph_register.obj"
+-input="./r_gpio_rx/src/r_gpio_rx.obj"
+-input="./r_gpio_rx/src/targets/rx63n/r_gpio_rx63n.obj"
+-input="./r_rspi_rx600/src/r_rspi_rx600.obj"
+-input="./src/HC_06.obj"
+-input="./src/suart/suart.obj"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,C_1,C_2,C,C$*,D*,W*,L,P*/0FFF00000,FIXEDVECT/0FFFFFF80
+-library=C:\Users\Miguel\E2_STU~1\WORKSP~1\HC_06\HARDWA~2\HC_06.lib
+-noprelink
+-list=HC_06.map
+-show
+-nooptimize
+-debug
+-output=C:\Users\Miguel\e2_studio\workspace\HC_06\HardwareDebug\HC_06.abs
+-rom=D=R,D_1=R_1,D_2=R_2
+-nocompress
+-vect=_undefined_interrupt_source_isr
+-nomessage
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SU
+                                  00000004  00001003      1000   4
+SI
+                                  00001004  00001403       400   4
+B_1
+                                  00001404  00001431        2e   1
+R_1
+                                  00001432  00001492        61   1
+B_2
+                                  00001494  0000149b         8   2
+R_2
+                                  0000149c  0000149c         0   1
+B
+                                  0000149c  00001b2b       690   4
+R
+                                  00001b2c  000039af      1e84   4
+C_1
+                                  fff00000  fff03598      3599   1
+C_2
+                                  fff0359a  fff037a1       208   2
+C
+                                  fff037a4  fff038ab       108   4
+C$DSEC
+                                  fff038ac  fff038cf        24   4
+C$BSEC
+                                  fff038d0  fff038e7        18   4
+C$VECT
+                                  fff038e8  fff03ce7       400   4
+D
+                                  fff03ce8  fff05b6b      1e84   4
+D_1
+                                  fff05b6c  fff05bcc        61   1
+D_2
+                                  fff05bcd  fff05bcd         0   1
+W
+                                  fff05bd0  fff05bd0         0   4
+W_1
+                                  fff05bd0  fff05be1        12   1
+W_2
+                                  fff05be2  fff05bf3        12   2
+L
+                                  fff05bf4  fff05cb8        c5   4
+P
+                                  fff05cb9  fff0a542      488a   1
+FIXEDVECT
+                                  ffffff80  ffffffff        80   4
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=SU
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  00000004  00001003      1000
+
+SECTION=SI
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  00001004  00001403       400
+
+SECTION=B_1
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  00001404  0000142b        28
+  _flmod
+                                  00001404        14   data ,g         3
+  _sml_buf
+                                  00001418        14   data ,g         0
+FILE=.\src\suart\suart.obj
+                                  0000142c  00001431         6
+  _tx_bytes
+                                  0000142c         3   data ,g         3
+  _rx_bytes
+                                  0000142f         3   data ,g         2
+
+SECTION=R_1
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  00001432  00001434         3
+  _rspi_initialized
+                                  00001432         3   data ,l         1
+FILE=.\src\HC_06.obj
+                                  00001435  0000143e         a
+  _msg
+                                  00001435         a   data ,g         1
+FILE=.\src\suart\suart.obj
+                                  0000143f  00001441         3
+  _txing
+                                  0000143f         1   data ,g         0
+  _rxing
+                                  00001440         1   data ,g         0
+  _suart_initialized
+                                  00001441         1   data ,g         1
+FILE=xfiles
+                                  00001442  00001491        50
+  _ebuf
+                                  00001442        50   data ,l         5
+FILE=xstate
+                                  00001492  00001492         1
+  __Mbcurmax
+                                  00001492         1   data ,g         1
+
+SECTION=B_2
+FILE=.\r_bsp\mcu\rx63n\cpu.obj
+                                  00001494  0000149b         8
+  _g_protect_counters
+                                  00001494         8   data ,l         3
+
+SECTION=B
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  0000149c  000014eb        50
+  __Files
+                                  0000149c        50   data ,g         4
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  000014ec  000018eb       400
+  _heap_area
+                                  000014ec       400   data ,l         2
+FILE=.\r_bsp\mcu\rx63n\mcu_interrupts.obj
+                                  000018ec  00001917        2c
+  _g_bsp_vectors
+                                  000018ec        2c   data ,l         4
+FILE=.\r_bsp\mcu\rx63n\mcu_locks.obj
+                                  00001918  00001aaf       198
+  _g_bsp_Locks
+                                  00001918       198   data ,g         2
+FILE=.\r_cmt_rx\src\r_cmt_rx.obj
+                                  00001ab0  00001acf        20
+  _g_cmt_modes
+                                  00001ab0        10   data ,l         5
+  _g_cmt_callbacks
+                                  00001ac0        10   data ,l         2
+FILE=.\r_glyph\lcd.obj
+                                  00001ad0  00001ad3         4
+  _lcd_handle
+                                  00001ad0         4   data ,g         3
+FILE=.\src\suart\suart.obj
+                                  00001ad4  00001b27        54
+  _baudrates
+                                  00001ad4         c   data ,g         5
+  _preload_polls
+                                  00001ae0         c   data ,g         2
+  _delta_polls
+                                  00001aec         c   data ,g         2
+  _rx_cbacks
+                                  00001af8         c   data ,g         3
+  _rx_pins
+                                  00001b04         c   data ,g         2
+  _tx_pins
+                                  00001b10         c   data ,g         2
+  _suart_states
+                                  00001b1c         c   data ,g         5
+FILE=_errno
+                                  00001b28  00001b2b         4
+  __errno
+                                  00001b28         4   data ,g         3
+
+SECTION=R
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  00001b2c  00001b3f        14
+  _env_list
+                                  00001b2c        10   data ,g         1
+  _environ
+                                  00001b3c         4   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  00001b40  00001b43         4
+  _brk
+                                  00001b40         4   data ,l         1
+FILE=.\r_glyph\src\glyph\fonts\bitmap_font.obj
+                                  00001b44  00001f43       400
+  _Bitmaps_table
+                                  00001b44       400   data ,g         0
+FILE=.\r_glyph\src\glyph\fonts\font_8x16.obj
+                                  00001f44  00002343       400
+  _Font8x16_table
+                                  00001f44       400   data ,g         0
+FILE=.\r_glyph\src\glyph\fonts\font_8x8.obj
+                                  00002344  00002743       400
+  _Font8x8_table
+                                  00002344       400   data ,g         2
+FILE=.\r_glyph\src\glyph\fonts\font_helvr10.obj
+                                  00002744  00002b43       400
+  _FontHelvr10_table
+                                  00002744       400   data ,g         0
+FILE=.\r_glyph\src\glyph\fonts\font_winfreesystem14x16.obj
+                                  00002b44  00002f43       400
+  _FontWinFreeSystem14x16_table
+                                  00002b44       400   data ,g         0
+FILE=.\r_glyph\src\glyph\fonts\font_x5x7.obj
+                                  00002f44  00003343       400
+  _Fontx5x7_table
+                                  00002f44       400   data ,g         0
+FILE=.\r_glyph\src\glyph\fonts\font_x6x13.obj
+                                  00003344  00003743       400
+  _Fontx6x13_table
+                                  00003344       400   data ,g         0
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  00003744  0000375f        1c
+  _g_rspi_locked_id
+                                  00003744         c   data ,l         3
+  _rspi_semaphore
+                                  00003750         4   data ,l         1
+  _g_rspi_channels
+                                  00003754         c   data ,g         5
+FILE=.\src\HC_06.obj
+                                  00003760  00003763         4
+  _charidx
+                                  00003760         4   data ,g         1
+FILE=xfiles
+                                  00003764  0000383b        d8
+  __Stdin
+                                  00003764        48   data ,g         8
+  __Stdout
+                                  000037ac        48   data ,g         8
+  __Stderr
+                                  000037f4        48   data ,g         4
+FILE=malloc
+                                  0000383c  00003843         8
+  __Aldata
+                                  0000383c         8   data ,g         3
+FILE=xprintf
+                                  00003844  00003847         4
+  _stderr
+                                  00003844         4   data ,g         0
+FILE=xctype
+                                  00003848  0000384f         8
+  __Ctype
+                                  00003848         4   data ,g         2
+  __Tls_setup__Ctype
+                                  0000384c         4   data ,g         1
+FILE=xstate
+                                  00003850  00003897        48
+  __Tls_setup__Mbcurmax
+                                  00003850         4   data ,g         1
+  __Mbstate
+                                  00003854        40   data ,g         2
+  __Tls_setup__Mbstate
+                                  00003894         4   data ,g         2
+FILE=localeco
+                                  00003898  000038eb        54
+  __Locale
+                                  00003898        50   data ,g         1
+  __Tls_setup__Locale
+                                  000038e8         4   data ,g         0
+FILE=xwcstate
+                                  000038ec  0000392f        44
+  __Wcstate
+                                  000038ec        40   data ,g         2
+  __Tls_setup__Wcstate
+                                  0000392c         4   data ,g         2
+FILE=xvalues
+                                  00003930  000039af        80
+  __Denorm
+                                  00003930        10   data ,g         0
+  __Eps
+                                  00003940        10   data ,g         0
+  __Hugeval
+                                  00003950        10   data ,g         0
+  __Inf
+                                  00003960        10   data ,g         1
+  __Nan
+                                  00003970        10   data ,g         0
+  __Snan
+                                  00003980        10   data ,g         0
+  __Rteps
+                                  00003990        10   data ,g         0
+  __Xbig
+                                  000039a0         8   data ,g         0
+  __Zero
+                                  000039a8         8   data ,g         0
+
+SECTION=C_1
+FILE=.\r_glyph\src\glyph\fonts\bitmap_font.obj
+                                  fff00000  fff0043b       43c
+  _Bitmaps_VolumeBar0
+                                  fff00000        32   data ,g         1
+  _Bitmaps_VolumeBar1
+                                  fff00032        32   data ,g         1
+  _Bitmaps_VolumeBar2
+                                  fff00064        32   data ,g         1
+  _Bitmaps_VolumeBar3
+                                  fff00096        32   data ,g         1
+  _Bitmaps_VolumeBar4
+                                  fff000c8        32   data ,g         1
+  _Bitmaps_VolumeBar5
+                                  fff000fa        32   data ,g         1
+  _Bitmaps_VolumeBar6
+                                  fff0012c        32   data ,g         1
+  _Bitmaps_VolumeBar7
+                                  fff0015e        32   data ,g         1
+  _Bitmaps_VolumeBar8
+                                  fff00190        32   data ,g         1
+  _Bitmaps_VolumeBar9
+                                  fff001c2        32   data ,g         1
+  _Bitmaps_VolumeBar10
+                                  fff001f4        32   data ,g         1
+  _Bitmaps_Bars0
+                                  fff00226        30   data ,g         1
+  _Bitmaps_Bars1
+                                  fff00256        30   data ,g         1
+  _Bitmaps_Bars2
+                                  fff00286        30   data ,g         1
+  _Bitmaps_Bars3
+                                  fff002b6        30   data ,g         1
+  _Bitmaps_Bars4
+                                  fff002e6        30   data ,g         1
+  _Bitmaps_Bars5
+                                  fff00316        30   data ,g         1
+  _Bitmaps_BatteryLow
+                                  fff00346        1a   data ,g         1
+  _Bitmaps_BatteryHigh
+                                  fff00360        1a   data ,g         1
+  _Bitmaps_AC
+                                  fff0037a        1a   data ,g         1
+  _Bitmaps_Signal
+                                  fff00394        22   data ,g         1
+  _Bitmaps_Voice
+                                  fff003b6        22   data ,g         1
+  _Bitmaps_Tone
+                                  fff003d8        22   data ,g         1
+  _Bitmaps_NOAA
+                                  fff003fa        42   data ,g         1
+FILE=.\r_glyph\src\glyph\fonts\font_8x16.obj
+                                  fff0043c  fff0163b      1200
+  _Font8x16_char_0
+                                  fff0043c        12   data ,g         1
+  _Font8x16_char_1
+                                  fff0044e        12   data ,g         1
+  _Font8x16_char_2
+                                  fff00460        12   data ,g         1
+  _Font8x16_char_3
+                                  fff00472        12   data ,g         1
+  _Font8x16_char_4
+                                  fff00484        12   data ,g         1
+  _Font8x16_char_5
+                                  fff00496        12   data ,g         1
+  _Font8x16_char_6
+                                  fff004a8        12   data ,g         1
+  _Font8x16_char_7
+                                  fff004ba        12   data ,g         1
+  _Font8x16_char_8
+                                  fff004cc        12   data ,g         1
+  _Font8x16_char_9
+                                  fff004de        12   data ,g         1
+  _Font8x16_char_10
+                                  fff004f0        12   data ,g         1
+  _Font8x16_char_11
+                                  fff00502        12   data ,g         1
+  _Font8x16_char_12
+                                  fff00514        12   data ,g         1
+  _Font8x16_char_13
+                                  fff00526        12   data ,g         1
+  _Font8x16_char_14
+                                  fff00538        12   data ,g         1
+  _Font8x16_char_15
+                                  fff0054a        12   data ,g         1
+  _Font8x16_char_16
+                                  fff0055c        12   data ,g         1
+  _Font8x16_char_17
+                                  fff0056e        12   data ,g         1
+  _Font8x16_char_18
+                                  fff00580        12   data ,g         1
+  _Font8x16_char_19
+                                  fff00592        12   data ,g         1
+  _Font8x16_char_20
+                                  fff005a4        12   data ,g         1
+  _Font8x16_char_21
+                                  fff005b6        12   data ,g         1
+  _Font8x16_char_22
+                                  fff005c8        12   data ,g         1
+  _Font8x16_char_23
+                                  fff005da        12   data ,g         1
+  _Font8x16_char_24
+                                  fff005ec        12   data ,g         1
+  _Font8x16_char_25
+                                  fff005fe        12   data ,g         1
+  _Font8x16_char_26
+                                  fff00610        12   data ,g         1
+  _Font8x16_char_27
+                                  fff00622        12   data ,g         1
+  _Font8x16_char_28
+                                  fff00634        12   data ,g         1
+  _Font8x16_char_29
+                                  fff00646        12   data ,g         1
+  _Font8x16_char_30
+                                  fff00658        12   data ,g         1
+  _Font8x16_char_31
+                                  fff0066a        12   data ,g         1
+  _Font8x16_char_32
+                                  fff0067c        12   data ,g         1
+  _Font8x16_char_33
+                                  fff0068e        12   data ,g         1
+  _Font8x16_char_34
+                                  fff006a0        12   data ,g         1
+  _Font8x16_char_35
+                                  fff006b2        12   data ,g         1
+  _Font8x16_char_36
+                                  fff006c4        12   data ,g         1
+  _Font8x16_char_37
+                                  fff006d6        12   data ,g         1
+  _Font8x16_char_38
+                                  fff006e8        12   data ,g         1
+  _Font8x16_char_39
+                                  fff006fa        12   data ,g         1
+  _Font8x16_char_40
+                                  fff0070c        12   data ,g         1
+  _Font8x16_char_41
+                                  fff0071e        12   data ,g         1
+  _Font8x16_char_42
+                                  fff00730        12   data ,g         1
+  _Font8x16_char_43
+                                  fff00742        12   data ,g         1
+  _Font8x16_char_44
+                                  fff00754        12   data ,g         1
+  _Font8x16_char_45
+                                  fff00766        12   data ,g         1
+  _Font8x16_char_46
+                                  fff00778        12   data ,g         1
+  _Font8x16_char_47
+                                  fff0078a        12   data ,g         1
+  _Font8x16_char_48
+                                  fff0079c        12   data ,g         1
+  _Font8x16_char_49
+                                  fff007ae        12   data ,g         1
+  _Font8x16_char_50
+                                  fff007c0        12   data ,g         1
+  _Font8x16_char_51
+                                  fff007d2        12   data ,g         1
+  _Font8x16_char_52
+                                  fff007e4        12   data ,g         1
+  _Font8x16_char_53
+                                  fff007f6        12   data ,g         1
+  _Font8x16_char_54
+                                  fff00808        12   data ,g         1
+  _Font8x16_char_55
+                                  fff0081a        12   data ,g         1
+  _Font8x16_char_56
+                                  fff0082c        12   data ,g         1
+  _Font8x16_char_57
+                                  fff0083e        12   data ,g         1
+  _Font8x16_char_58
+                                  fff00850        12   data ,g         1
+  _Font8x16_char_59
+                                  fff00862        12   data ,g         1
+  _Font8x16_char_60
+                                  fff00874        12   data ,g         1
+  _Font8x16_char_61
+                                  fff00886        12   data ,g         1
+  _Font8x16_char_62
+                                  fff00898        12   data ,g         1
+  _Font8x16_char_63
+                                  fff008aa        12   data ,g         1
+  _Font8x16_char_64
+                                  fff008bc        12   data ,g         1
+  _Font8x16_char_65
+                                  fff008ce        12   data ,g         1
+  _Font8x16_char_66
+                                  fff008e0        12   data ,g         1
+  _Font8x16_char_67
+                                  fff008f2        12   data ,g         1
+  _Font8x16_char_68
+                                  fff00904        12   data ,g         1
+  _Font8x16_char_69
+                                  fff00916        12   data ,g         1
+  _Font8x16_char_70
+                                  fff00928        12   data ,g         1
+  _Font8x16_char_71
+                                  fff0093a        12   data ,g         1
+  _Font8x16_char_72
+                                  fff0094c        12   data ,g         1
+  _Font8x16_char_73
+                                  fff0095e        12   data ,g         1
+  _Font8x16_char_74
+                                  fff00970        12   data ,g         1
+  _Font8x16_char_75
+                                  fff00982        12   data ,g         1
+  _Font8x16_char_76
+                                  fff00994        12   data ,g         1
+  _Font8x16_char_77
+                                  fff009a6        12   data ,g         1
+  _Font8x16_char_78
+                                  fff009b8        12   data ,g         1
+  _Font8x16_char_79
+                                  fff009ca        12   data ,g         1
+  _Font8x16_char_80
+                                  fff009dc        12   data ,g         1
+  _Font8x16_char_81
+                                  fff009ee        12   data ,g         1
+  _Font8x16_char_82
+                                  fff00a00        12   data ,g         1
+  _Font8x16_char_83
+                                  fff00a12        12   data ,g         1
+  _Font8x16_char_84
+                                  fff00a24        12   data ,g         1
+  _Font8x16_char_85
+                                  fff00a36        12   data ,g         1
+  _Font8x16_char_86
+                                  fff00a48        12   data ,g         1
+  _Font8x16_char_87
+                                  fff00a5a        12   data ,g         1
+  _Font8x16_char_88
+                                  fff00a6c        12   data ,g         1
+  _Font8x16_char_89
+                                  fff00a7e        12   data ,g         1
+  _Font8x16_char_90
+                                  fff00a90        12   data ,g         1
+  _Font8x16_char_91
+                                  fff00aa2        12   data ,g         1
+  _Font8x16_char_92
+                                  fff00ab4        12   data ,g         1
+  _Font8x16_char_93
+                                  fff00ac6        12   data ,g         1
+  _Font8x16_char_94
+                                  fff00ad8        12   data ,g         1
+  _Font8x16_char_95
+                                  fff00aea        12   data ,g         1
+  _Font8x16_char_96
+                                  fff00afc        12   data ,g         1
+  _Font8x16_char_97
+                                  fff00b0e        12   data ,g         1
+  _Font8x16_char_98
+                                  fff00b20        12   data ,g         1
+  _Font8x16_char_99
+                                  fff00b32        12   data ,g         1
+  _Font8x16_char_100
+                                  fff00b44        12   data ,g         1
+  _Font8x16_char_101
+                                  fff00b56        12   data ,g         1
+  _Font8x16_char_102
+                                  fff00b68        12   data ,g         1
+  _Font8x16_char_103
+                                  fff00b7a        12   data ,g         1
+  _Font8x16_char_104
+                                  fff00b8c        12   data ,g         1
+  _Font8x16_char_105
+                                  fff00b9e        12   data ,g         1
+  _Font8x16_char_106
+                                  fff00bb0        12   data ,g         1
+  _Font8x16_char_107
+                                  fff00bc2        12   data ,g         1
+  _Font8x16_char_108
+                                  fff00bd4        12   data ,g         1
+  _Font8x16_char_109
+                                  fff00be6        12   data ,g         1
+  _Font8x16_char_110
+                                  fff00bf8        12   data ,g         1
+  _Font8x16_char_111
+                                  fff00c0a        12   data ,g         1
+  _Font8x16_char_112
+                                  fff00c1c        12   data ,g         1
+  _Font8x16_char_113
+                                  fff00c2e        12   data ,g         1
+  _Font8x16_char_114
+                                  fff00c40        12   data ,g         1
+  _Font8x16_char_115
+                                  fff00c52        12   data ,g         1
+  _Font8x16_char_116
+                                  fff00c64        12   data ,g         1
+  _Font8x16_char_117
+                                  fff00c76        12   data ,g         1
+  _Font8x16_char_118
+                                  fff00c88        12   data ,g         1
+  _Font8x16_char_119
+                                  fff00c9a        12   data ,g         1
+  _Font8x16_char_120
+                                  fff00cac        12   data ,g         1
+  _Font8x16_char_121
+                                  fff00cbe        12   data ,g         1
+  _Font8x16_char_122
+                                  fff00cd0        12   data ,g         1
+  _Font8x16_char_123
+                                  fff00ce2        12   data ,g         1
+  _Font8x16_char_124
+                                  fff00cf4        12   data ,g         1
+  _Font8x16_char_125
+                                  fff00d06        12   data ,g         1
+  _Font8x16_char_126
+                                  fff00d18        12   data ,g         1
+  _Font8x16_char_127
+                                  fff00d2a        12   data ,g         1
+  _Font8x16_char_128
+                                  fff00d3c        12   data ,g         1
+  _Font8x16_char_129
+                                  fff00d4e        12   data ,g         1
+  _Font8x16_char_130
+                                  fff00d60        12   data ,g         1
+  _Font8x16_char_131
+                                  fff00d72        12   data ,g         1
+  _Font8x16_char_132
+                                  fff00d84        12   data ,g         1
+  _Font8x16_char_133
+                                  fff00d96        12   data ,g         1
+  _Font8x16_char_134
+                                  fff00da8        12   data ,g         1
+  _Font8x16_char_135
+                                  fff00dba        12   data ,g         1
+  _Font8x16_char_136
+                                  fff00dcc        12   data ,g         1
+  _Font8x16_char_137
+                                  fff00dde        12   data ,g         1
+  _Font8x16_char_138
+                                  fff00df0        12   data ,g         1
+  _Font8x16_char_139
+                                  fff00e02        12   data ,g         1
+  _Font8x16_char_140
+                                  fff00e14        12   data ,g         1
+  _Font8x16_char_141
+                                  fff00e26        12   data ,g         1
+  _Font8x16_char_142
+                                  fff00e38        12   data ,g         1
+  _Font8x16_char_143
+                                  fff00e4a        12   data ,g         1
+  _Font8x16_char_144
+                                  fff00e5c        12   data ,g         1
+  _Font8x16_char_145
+                                  fff00e6e        12   data ,g         1
+  _Font8x16_char_146
+                                  fff00e80        12   data ,g         1
+  _Font8x16_char_147
+                                  fff00e92        12   data ,g         1
+  _Font8x16_char_148
+                                  fff00ea4        12   data ,g         1
+  _Font8x16_char_149
+                                  fff00eb6        12   data ,g         1
+  _Font8x16_char_150
+                                  fff00ec8        12   data ,g         1
+  _Font8x16_char_151
+                                  fff00eda        12   data ,g         1
+  _Font8x16_char_152
+                                  fff00eec        12   data ,g         1
+  _Font8x16_char_153
+                                  fff00efe        12   data ,g         1
+  _Font8x16_char_154
+                                  fff00f10        12   data ,g         1
+  _Font8x16_char_155
+                                  fff00f22        12   data ,g         1
+  _Font8x16_char_156
+                                  fff00f34        12   data ,g         1
+  _Font8x16_char_157
+                                  fff00f46        12   data ,g         1
+  _Font8x16_char_158
+                                  fff00f58        12   data ,g         1
+  _Font8x16_char_159
+                                  fff00f6a        12   data ,g         1
+  _Font8x16_char_160
+                                  fff00f7c        12   data ,g         1
+  _Font8x16_char_161
+                                  fff00f8e        12   data ,g         1
+  _Font8x16_char_162
+                                  fff00fa0        12   data ,g         1
+  _Font8x16_char_163
+                                  fff00fb2        12   data ,g         1
+  _Font8x16_char_164
+                                  fff00fc4        12   data ,g         1
+  _Font8x16_char_165
+                                  fff00fd6        12   data ,g         1
+  _Font8x16_char_166
+                                  fff00fe8        12   data ,g         1
+  _Font8x16_char_167
+                                  fff00ffa        12   data ,g         1
+  _Font8x16_char_168
+                                  fff0100c        12   data ,g         1
+  _Font8x16_char_169
+                                  fff0101e        12   data ,g         1
+  _Font8x16_char_170
+                                  fff01030        12   data ,g         1
+  _Font8x16_char_171
+                                  fff01042        12   data ,g         1
+  _Font8x16_char_172
+                                  fff01054        12   data ,g         1
+  _Font8x16_char_173
+                                  fff01066        12   data ,g         1
+  _Font8x16_char_174
+                                  fff01078        12   data ,g         1
+  _Font8x16_char_175
+                                  fff0108a        12   data ,g         1
+  _Font8x16_char_176
+                                  fff0109c        12   data ,g         1
+  _Font8x16_char_177
+                                  fff010ae        12   data ,g         1
+  _Font8x16_char_178
+                                  fff010c0        12   data ,g         1
+  _Font8x16_char_179
+                                  fff010d2        12   data ,g         1
+  _Font8x16_char_180
+                                  fff010e4        12   data ,g         1
+  _Font8x16_char_181
+                                  fff010f6        12   data ,g         1
+  _Font8x16_char_182
+                                  fff01108        12   data ,g         1
+  _Font8x16_char_183
+                                  fff0111a        12   data ,g         1
+  _Font8x16_char_184
+                                  fff0112c        12   data ,g         1
+  _Font8x16_char_185
+                                  fff0113e        12   data ,g         1
+  _Font8x16_char_186
+                                  fff01150        12   data ,g         1
+  _Font8x16_char_187
+                                  fff01162        12   data ,g         1
+  _Font8x16_char_188
+                                  fff01174        12   data ,g         1
+  _Font8x16_char_189
+                                  fff01186        12   data ,g         1
+  _Font8x16_char_190
+                                  fff01198        12   data ,g         1
+  _Font8x16_char_191
+                                  fff011aa        12   data ,g         1
+  _Font8x16_char_192
+                                  fff011bc        12   data ,g         1
+  _Font8x16_char_193
+                                  fff011ce        12   data ,g         1
+  _Font8x16_char_194
+                                  fff011e0        12   data ,g         1
+  _Font8x16_char_195
+                                  fff011f2        12   data ,g         1
+  _Font8x16_char_196
+                                  fff01204        12   data ,g         1
+  _Font8x16_char_197
+                                  fff01216        12   data ,g         1
+  _Font8x16_char_198
+                                  fff01228        12   data ,g         1
+  _Font8x16_char_199
+                                  fff0123a        12   data ,g         1
+  _Font8x16_char_200
+                                  fff0124c        12   data ,g         1
+  _Font8x16_char_201
+                                  fff0125e        12   data ,g         1
+  _Font8x16_char_202
+                                  fff01270        12   data ,g         1
+  _Font8x16_char_203
+                                  fff01282        12   data ,g         1
+  _Font8x16_char_204
+                                  fff01294        12   data ,g         1
+  _Font8x16_char_205
+                                  fff012a6        12   data ,g         1
+  _Font8x16_char_206
+                                  fff012b8        12   data ,g         1
+  _Font8x16_char_207
+                                  fff012ca        12   data ,g         1
+  _Font8x16_char_208
+                                  fff012dc        12   data ,g         1
+  _Font8x16_char_209
+                                  fff012ee        12   data ,g         1
+  _Font8x16_char_210
+                                  fff01300        12   data ,g         1
+  _Font8x16_char_211
+                                  fff01312        12   data ,g         1
+  _Font8x16_char_212
+                                  fff01324        12   data ,g         1
+  _Font8x16_char_213
+                                  fff01336        12   data ,g         1
+  _Font8x16_char_214
+                                  fff01348        12   data ,g         1
+  _Font8x16_char_215
+                                  fff0135a        12   data ,g         1
+  _Font8x16_char_216
+                                  fff0136c        12   data ,g         1
+  _Font8x16_char_217
+                                  fff0137e        12   data ,g         1
+  _Font8x16_char_218
+                                  fff01390        12   data ,g         1
+  _Font8x16_char_219
+                                  fff013a2        12   data ,g         1
+  _Font8x16_char_220
+                                  fff013b4        12   data ,g         1
+  _Font8x16_char_221
+                                  fff013c6        12   data ,g         1
+  _Font8x16_char_222
+                                  fff013d8        12   data ,g         1
+  _Font8x16_char_223
+                                  fff013ea        12   data ,g         1
+  _Font8x16_char_224
+                                  fff013fc        12   data ,g         1
+  _Font8x16_char_225
+                                  fff0140e        12   data ,g         1
+  _Font8x16_char_226
+                                  fff01420        12   data ,g         1
+  _Font8x16_char_227
+                                  fff01432        12   data ,g         1
+  _Font8x16_char_228
+                                  fff01444        12   data ,g         1
+  _Font8x16_char_229
+                                  fff01456        12   data ,g         1
+  _Font8x16_char_230
+                                  fff01468        12   data ,g         1
+  _Font8x16_char_231
+                                  fff0147a        12   data ,g         1
+  _Font8x16_char_232
+                                  fff0148c        12   data ,g         1
+  _Font8x16_char_233
+                                  fff0149e        12   data ,g         1
+  _Font8x16_char_234
+                                  fff014b0        12   data ,g         1
+  _Font8x16_char_235
+                                  fff014c2        12   data ,g         1
+  _Font8x16_char_236
+                                  fff014d4        12   data ,g         1
+  _Font8x16_char_237
+                                  fff014e6        12   data ,g         1
+  _Font8x16_char_238
+                                  fff014f8        12   data ,g         1
+  _Font8x16_char_239
+                                  fff0150a        12   data ,g         1
+  _Font8x16_char_240
+                                  fff0151c        12   data ,g         1
+  _Font8x16_char_241
+                                  fff0152e        12   data ,g         1
+  _Font8x16_char_242
+                                  fff01540        12   data ,g         1
+  _Font8x16_char_243
+                                  fff01552        12   data ,g         1
+  _Font8x16_char_244
+                                  fff01564        12   data ,g         1
+  _Font8x16_char_245
+                                  fff01576        12   data ,g         1
+  _Font8x16_char_246
+                                  fff01588        12   data ,g         1
+  _Font8x16_char_247
+                                  fff0159a        12   data ,g         1
+  _Font8x16_char_248
+                                  fff015ac        12   data ,g         1
+  _Font8x16_char_249
+                                  fff015be        12   data ,g         1
+  _Font8x16_char_250
+                                  fff015d0        12   data ,g         1
+  _Font8x16_char_251
+                                  fff015e2        12   data ,g         1
+  _Font8x16_char_252
+                                  fff015f4        12   data ,g         1
+  _Font8x16_char_253
+                                  fff01606        12   data ,g         1
+  _Font8x16_char_254
+                                  fff01618        12   data ,g         1
+  _Font8x16_char_255
+                                  fff0162a        12   data ,g         1
+FILE=.\r_glyph\src\glyph\fonts\font_8x8.obj
+                                  fff0163c  fff0203b       a00
+  _Font8x8_char_0
+                                  fff0163c         a   data ,g         1
+  _Font8x8_char_1
+                                  fff01646         a   data ,g         1
+  _Font8x8_char_2
+                                  fff01650         a   data ,g         1
+  _Font8x8_char_3
+                                  fff0165a         a   data ,g         1
+  _Font8x8_char_4
+                                  fff01664         a   data ,g         1
+  _Font8x8_char_5
+                                  fff0166e         a   data ,g         1
+  _Font8x8_char_6
+                                  fff01678         a   data ,g         1
+  _Font8x8_char_7
+                                  fff01682         a   data ,g         1
+  _Font8x8_char_8
+                                  fff0168c         a   data ,g         1
+  _Font8x8_char_9
+                                  fff01696         a   data ,g         1
+  _Font8x8_char_10
+                                  fff016a0         a   data ,g         1
+  _Font8x8_char_11
+                                  fff016aa         a   data ,g         1
+  _Font8x8_char_12
+                                  fff016b4         a   data ,g         1
+  _Font8x8_char_13
+                                  fff016be         a   data ,g         1
+  _Font8x8_char_14
+                                  fff016c8         a   data ,g         1
+  _Font8x8_char_15
+                                  fff016d2         a   data ,g         1
+  _Font8x8_char_16
+                                  fff016dc         a   data ,g         1
+  _Font8x8_char_17
+                                  fff016e6         a   data ,g         1
+  _Font8x8_char_18
+                                  fff016f0         a   data ,g         1
+  _Font8x8_char_19
+                                  fff016fa         a   data ,g         1
+  _Font8x8_char_20
+                                  fff01704         a   data ,g         1
+  _Font8x8_char_21
+                                  fff0170e         a   data ,g         1
+  _Font8x8_char_22
+                                  fff01718         a   data ,g         1
+  _Font8x8_char_23
+                                  fff01722         a   data ,g         1
+  _Font8x8_char_24
+                                  fff0172c         a   data ,g         1
+  _Font8x8_char_25
+                                  fff01736         a   data ,g         1
+  _Font8x8_char_26
+                                  fff01740         a   data ,g         1
+  _Font8x8_char_27
+                                  fff0174a         a   data ,g         1
+  _Font8x8_char_28
+                                  fff01754         a   data ,g         1
+  _Font8x8_char_29
+                                  fff0175e         a   data ,g         1
+  _Font8x8_char_30
+                                  fff01768         a   data ,g         1
+  _Font8x8_char_31
+                                  fff01772         a   data ,g         1
+  _Font8x8_char_32
+                                  fff0177c         a   data ,g         1
+  _Font8x8_char_33
+                                  fff01786         a   data ,g         1
+  _Font8x8_char_34
+                                  fff01790         a   data ,g         1
+  _Font8x8_char_35
+                                  fff0179a         a   data ,g         1
+  _Font8x8_char_36
+                                  fff017a4         a   data ,g         1
+  _Font8x8_char_37
+                                  fff017ae         a   data ,g         1
+  _Font8x8_char_38
+                                  fff017b8         a   data ,g         1
+  _Font8x8_char_39
+                                  fff017c2         a   data ,g         1
+  _Font8x8_char_40
+                                  fff017cc         a   data ,g         1
+  _Font8x8_char_41
+                                  fff017d6         a   data ,g         1
+  _Font8x8_char_42
+                                  fff017e0         a   data ,g         1
+  _Font8x8_char_43
+                                  fff017ea         a   data ,g         1
+  _Font8x8_char_44
+                                  fff017f4         a   data ,g         1
+  _Font8x8_char_45
+                                  fff017fe         a   data ,g         1
+  _Font8x8_char_46
+                                  fff01808         a   data ,g         1
+  _Font8x8_char_47
+                                  fff01812         a   data ,g         1
+  _Font8x8_char_48
+                                  fff0181c         a   data ,g         1
+  _Font8x8_char_49
+                                  fff01826         a   data ,g         1
+  _Font8x8_char_50
+                                  fff01830         a   data ,g         1
+  _Font8x8_char_51
+                                  fff0183a         a   data ,g         1
+  _Font8x8_char_52
+                                  fff01844         a   data ,g         1
+  _Font8x8_char_53
+                                  fff0184e         a   data ,g         1
+  _Font8x8_char_54
+                                  fff01858         a   data ,g         1
+  _Font8x8_char_55
+                                  fff01862         a   data ,g         1
+  _Font8x8_char_56
+                                  fff0186c         a   data ,g         1
+  _Font8x8_char_57
+                                  fff01876         a   data ,g         1
+  _Font8x8_char_58
+                                  fff01880         a   data ,g         1
+  _Font8x8_char_59
+                                  fff0188a         a   data ,g         1
+  _Font8x8_char_60
+                                  fff01894         a   data ,g         1
+  _Font8x8_char_61
+                                  fff0189e         a   data ,g         1
+  _Font8x8_char_62
+                                  fff018a8         a   data ,g         1
+  _Font8x8_char_63
+                                  fff018b2         a   data ,g         1
+  _Font8x8_char_64
+                                  fff018bc         a   data ,g         1
+  _Font8x8_char_65
+                                  fff018c6         a   data ,g         1
+  _Font8x8_char_66
+                                  fff018d0         a   data ,g         1
+  _Font8x8_char_67
+                                  fff018da         a   data ,g         1
+  _Font8x8_char_68
+                                  fff018e4         a   data ,g         1
+  _Font8x8_char_69
+                                  fff018ee         a   data ,g         1
+  _Font8x8_char_70
+                                  fff018f8         a   data ,g         1
+  _Font8x8_char_71
+                                  fff01902         a   data ,g         1
+  _Font8x8_char_72
+                                  fff0190c         a   data ,g         1
+  _Font8x8_char_73
+                                  fff01916         a   data ,g         1
+  _Font8x8_char_74
+                                  fff01920         a   data ,g         1
+  _Font8x8_char_75
+                                  fff0192a         a   data ,g         1
+  _Font8x8_char_76
+                                  fff01934         a   data ,g         1
+  _Font8x8_char_77
+                                  fff0193e         a   data ,g         1
+  _Font8x8_char_78
+                                  fff01948         a   data ,g         1
+  _Font8x8_char_79
+                                  fff01952         a   data ,g         1
+  _Font8x8_char_80
+                                  fff0195c         a   data ,g         1
+  _Font8x8_char_81
+                                  fff01966         a   data ,g         1
+  _Font8x8_char_82
+                                  fff01970         a   data ,g         1
+  _Font8x8_char_83
+                                  fff0197a         a   data ,g         1
+  _Font8x8_char_84
+                                  fff01984         a   data ,g         1
+  _Font8x8_char_85
+                                  fff0198e         a   data ,g         1
+  _Font8x8_char_86
+                                  fff01998         a   data ,g         1
+  _Font8x8_char_87
+                                  fff019a2         a   data ,g         1
+  _Font8x8_char_88
+                                  fff019ac         a   data ,g         1
+  _Font8x8_char_89
+                                  fff019b6         a   data ,g         1
+  _Font8x8_char_90
+                                  fff019c0         a   data ,g         1
+  _Font8x8_char_91
+                                  fff019ca         a   data ,g         1
+  _Font8x8_char_92
+                                  fff019d4         a   data ,g         1
+  _Font8x8_char_93
+                                  fff019de         a   data ,g         1
+  _Font8x8_char_94
+                                  fff019e8         a   data ,g         1
+  _Font8x8_char_95
+                                  fff019f2         a   data ,g         1
+  _Font8x8_char_96
+                                  fff019fc         a   data ,g         1
+  _Font8x8_char_97
+                                  fff01a06         a   data ,g         1
+  _Font8x8_char_98
+                                  fff01a10         a   data ,g         1
+  _Font8x8_char_99
+                                  fff01a1a         a   data ,g         1
+  _Font8x8_char_100
+                                  fff01a24         a   data ,g         1
+  _Font8x8_char_101
+                                  fff01a2e         a   data ,g         1
+  _Font8x8_char_102
+                                  fff01a38         a   data ,g         1
+  _Font8x8_char_103
+                                  fff01a42         a   data ,g         1
+  _Font8x8_char_104
+                                  fff01a4c         a   data ,g         1
+  _Font8x8_char_105
+                                  fff01a56         a   data ,g         1
+  _Font8x8_char_106
+                                  fff01a60         a   data ,g         1
+  _Font8x8_char_107
+                                  fff01a6a         a   data ,g         1
+  _Font8x8_char_108
+                                  fff01a74         a   data ,g         1
+  _Font8x8_char_109
+                                  fff01a7e         a   data ,g         1
+  _Font8x8_char_110
+                                  fff01a88         a   data ,g         1
+  _Font8x8_char_111
+                                  fff01a92         a   data ,g         1
+  _Font8x8_char_112
+                                  fff01a9c         a   data ,g         1
+  _Font8x8_char_113
+                                  fff01aa6         a   data ,g         1
+  _Font8x8_char_114
+                                  fff01ab0         a   data ,g         1
+  _Font8x8_char_115
+                                  fff01aba         a   data ,g         1
+  _Font8x8_char_116
+                                  fff01ac4         a   data ,g         1
+  _Font8x8_char_117
+                                  fff01ace         a   data ,g         1
+  _Font8x8_char_118
+                                  fff01ad8         a   data ,g         1
+  _Font8x8_char_119
+                                  fff01ae2         a   data ,g         1
+  _Font8x8_char_120
+                                  fff01aec         a   data ,g         1
+  _Font8x8_char_121
+                                  fff01af6         a   data ,g         1
+  _Font8x8_char_122
+                                  fff01b00         a   data ,g         1
+  _Font8x8_char_123
+                                  fff01b0a         a   data ,g         1
+  _Font8x8_char_124
+                                  fff01b14         a   data ,g         1
+  _Font8x8_char_125
+                                  fff01b1e         a   data ,g         1
+  _Font8x8_char_126
+                                  fff01b28         a   data ,g         1
+  _Font8x8_char_127
+                                  fff01b32         a   data ,g         1
+  _Font8x8_char_128
+                                  fff01b3c         a   data ,g         1
+  _Font8x8_char_129
+                                  fff01b46         a   data ,g         1
+  _Font8x8_char_130
+                                  fff01b50         a   data ,g         1
+  _Font8x8_char_131
+                                  fff01b5a         a   data ,g         1
+  _Font8x8_char_132
+                                  fff01b64         a   data ,g         1
+  _Font8x8_char_133
+                                  fff01b6e         a   data ,g         1
+  _Font8x8_char_134
+                                  fff01b78         a   data ,g         1
+  _Font8x8_char_135
+                                  fff01b82         a   data ,g         1
+  _Font8x8_char_136
+                                  fff01b8c         a   data ,g         1
+  _Font8x8_char_137
+                                  fff01b96         a   data ,g         1
+  _Font8x8_char_138
+                                  fff01ba0         a   data ,g         1
+  _Font8x8_char_139
+                                  fff01baa         a   data ,g         1
+  _Font8x8_char_140
+                                  fff01bb4         a   data ,g         1
+  _Font8x8_char_141
+                                  fff01bbe         a   data ,g         1
+  _Font8x8_char_142
+                                  fff01bc8         a   data ,g         1
+  _Font8x8_char_143
+                                  fff01bd2         a   data ,g         1
+  _Font8x8_char_144
+                                  fff01bdc         a   data ,g         1
+  _Font8x8_char_145
+                                  fff01be6         a   data ,g         1
+  _Font8x8_char_146
+                                  fff01bf0         a   data ,g         1
+  _Font8x8_char_147
+                                  fff01bfa         a   data ,g         1
+  _Font8x8_char_148
+                                  fff01c04         a   data ,g         1
+  _Font8x8_char_149
+                                  fff01c0e         a   data ,g         1
+  _Font8x8_char_150
+                                  fff01c18         a   data ,g         1
+  _Font8x8_char_151
+                                  fff01c22         a   data ,g         1
+  _Font8x8_char_152
+                                  fff01c2c         a   data ,g         1
+  _Font8x8_char_153
+                                  fff01c36         a   data ,g         1
+  _Font8x8_char_154
+                                  fff01c40         a   data ,g         1
+  _Font8x8_char_155
+                                  fff01c4a         a   data ,g         1
+  _Font8x8_char_156
+                                  fff01c54         a   data ,g         1
+  _Font8x8_char_157
+                                  fff01c5e         a   data ,g         1
+  _Font8x8_char_158
+                                  fff01c68         a   data ,g         1
+  _Font8x8_char_159
+                                  fff01c72         a   data ,g         1
+  _Font8x8_char_160
+                                  fff01c7c         a   data ,g         1
+  _Font8x8_char_161
+                                  fff01c86         a   data ,g         1
+  _Font8x8_char_162
+                                  fff01c90         a   data ,g         1
+  _Font8x8_char_163
+                                  fff01c9a         a   data ,g         1
+  _Font8x8_char_164
+                                  fff01ca4         a   data ,g         1
+  _Font8x8_char_165
+                                  fff01cae         a   data ,g         1
+  _Font8x8_char_166
+                                  fff01cb8         a   data ,g         1
+  _Font8x8_char_167
+                                  fff01cc2         a   data ,g         1
+  _Font8x8_char_168
+                                  fff01ccc         a   data ,g         1
+  _Font8x8_char_169
+                                  fff01cd6         a   data ,g         1
+  _Font8x8_char_170
+                                  fff01ce0         a   data ,g         1
+  _Font8x8_char_171
+                                  fff01cea         a   data ,g         1
+  _Font8x8_char_172
+                                  fff01cf4         a   data ,g         1
+  _Font8x8_char_173
+                                  fff01cfe         a   data ,g         1
+  _Font8x8_char_174
+                                  fff01d08         a   data ,g         1
+  _Font8x8_char_175
+                                  fff01d12         a   data ,g         1
+  _Font8x8_char_176
+                                  fff01d1c         a   data ,g         1
+  _Font8x8_char_177
+                                  fff01d26         a   data ,g         1
+  _Font8x8_char_178
+                                  fff01d30         a   data ,g         1
+  _Font8x8_char_179
+                                  fff01d3a         a   data ,g         1
+  _Font8x8_char_180
+                                  fff01d44         a   data ,g         1
+  _Font8x8_char_181
+                                  fff01d4e         a   data ,g         1
+  _Font8x8_char_182
+                                  fff01d58         a   data ,g         1
+  _Font8x8_char_183
+                                  fff01d62         a   data ,g         1
+  _Font8x8_char_184
+                                  fff01d6c         a   data ,g         1
+  _Font8x8_char_185
+                                  fff01d76         a   data ,g         1
+  _Font8x8_char_186
+                                  fff01d80         a   data ,g         1
+  _Font8x8_char_187
+                                  fff01d8a         a   data ,g         1
+  _Font8x8_char_188
+                                  fff01d94         a   data ,g         1
+  _Font8x8_char_189
+                                  fff01d9e         a   data ,g         1
+  _Font8x8_char_190
+                                  fff01da8         a   data ,g         1
+  _Font8x8_char_191
+                                  fff01db2         a   data ,g         1
+  _Font8x8_char_192
+                                  fff01dbc         a   data ,g         1
+  _Font8x8_char_193
+                                  fff01dc6         a   data ,g         1
+  _Font8x8_char_194
+                                  fff01dd0         a   data ,g         1
+  _Font8x8_char_195
+                                  fff01dda         a   data ,g         1
+  _Font8x8_char_196
+                                  fff01de4         a   data ,g         1
+  _Font8x8_char_197
+                                  fff01dee         a   data ,g         1
+  _Font8x8_char_198
+                                  fff01df8         a   data ,g         1
+  _Font8x8_char_199
+                                  fff01e02         a   data ,g         1
+  _Font8x8_char_200
+                                  fff01e0c         a   data ,g         1
+  _Font8x8_char_201
+                                  fff01e16         a   data ,g         1
+  _Font8x8_char_202
+                                  fff01e20         a   data ,g         1
+  _Font8x8_char_203
+                                  fff01e2a         a   data ,g         1
+  _Font8x8_char_204
+                                  fff01e34         a   data ,g         1
+  _Font8x8_char_205
+                                  fff01e3e         a   data ,g         1
+  _Font8x8_char_206
+                                  fff01e48         a   data ,g         1
+  _Font8x8_char_207
+                                  fff01e52         a   data ,g         1
+  _Font8x8_char_208
+                                  fff01e5c         a   data ,g         1
+  _Font8x8_char_209
+                                  fff01e66         a   data ,g         1
+  _Font8x8_char_210
+                                  fff01e70         a   data ,g         1
+  _Font8x8_char_211
+                                  fff01e7a         a   data ,g         1
+  _Font8x8_char_212
+                                  fff01e84         a   data ,g         1
+  _Font8x8_char_213
+                                  fff01e8e         a   data ,g         1
+  _Font8x8_char_214
+                                  fff01e98         a   data ,g         1
+  _Font8x8_char_215
+                                  fff01ea2         a   data ,g         1
+  _Font8x8_char_216
+                                  fff01eac         a   data ,g         1
+  _Font8x8_char_217
+                                  fff01eb6         a   data ,g         1
+  _Font8x8_char_218
+                                  fff01ec0         a   data ,g         1
+  _Font8x8_char_219
+                                  fff01eca         a   data ,g         1
+  _Font8x8_char_220
+                                  fff01ed4         a   data ,g         1
+  _Font8x8_char_221
+                                  fff01ede         a   data ,g         1
+  _Font8x8_char_222
+                                  fff01ee8         a   data ,g         1
+  _Font8x8_char_223
+                                  fff01ef2         a   data ,g         1
+  _Font8x8_char_224
+                                  fff01efc         a   data ,g         1
+  _Font8x8_char_225
+                                  fff01f06         a   data ,g         1
+  _Font8x8_char_226
+                                  fff01f10         a   data ,g         1
+  _Font8x8_char_227
+                                  fff01f1a         a   data ,g         1
+  _Font8x8_char_228
+                                  fff01f24         a   data ,g         1
+  _Font8x8_char_229
+                                  fff01f2e         a   data ,g         1
+  _Font8x8_char_230
+                                  fff01f38         a   data ,g         1
+  _Font8x8_char_231
+                                  fff01f42         a   data ,g         1
+  _Font8x8_char_232
+                                  fff01f4c         a   data ,g         1
+  _Font8x8_char_233
+                                  fff01f56         a   data ,g         1
+  _Font8x8_char_234
+                                  fff01f60         a   data ,g         1
+  _Font8x8_char_235
+                                  fff01f6a         a   data ,g         1
+  _Font8x8_char_236
+                                  fff01f74         a   data ,g         1
+  _Font8x8_char_237
+                                  fff01f7e         a   data ,g         1
+  _Font8x8_char_238
+                                  fff01f88         a   data ,g         1
+  _Font8x8_char_239
+                                  fff01f92         a   data ,g         1
+  _Font8x8_char_240
+                                  fff01f9c         a   data ,g         1
+  _Font8x8_char_241
+                                  fff01fa6         a   data ,g         1
+  _Font8x8_char_242
+                                  fff01fb0         a   data ,g         1
+  _Font8x8_char_243
+                                  fff01fba         a   data ,g         1
+  _Font8x8_char_244
+                                  fff01fc4         a   data ,g         1
+  _Font8x8_char_245
+                                  fff01fce         a   data ,g         1
+  _Font8x8_char_246
+                                  fff01fd8         a   data ,g         1
+  _Font8x8_char_247
+                                  fff01fe2         a   data ,g         1
+  _Font8x8_char_248
+                                  fff01fec         a   data ,g         1
+  _Font8x8_char_249
+                                  fff01ff6         a   data ,g         1
+  _Font8x8_char_250
+                                  fff02000         a   data ,g         1
+  _Font8x8_char_251
+                                  fff0200a         a   data ,g         1
+  _Font8x8_char_252
+                                  fff02014         a   data ,g         1
+  _Font8x8_char_253
+                                  fff0201e         a   data ,g         1
+  _Font8x8_char_254
+                                  fff02028         a   data ,g         1
+  _Font8x8_char_255
+                                  fff02032         a   data ,g         1
+FILE=.\r_glyph\src\glyph\fonts\font_helvr10.obj
+                                  fff0203c  fff02525       4ea
+  _FontHelvr10_char_32
+                                  fff0203c         8   data ,g         1
+  _FontHelvr10_char_33
+                                  fff02044         8   data ,g         1
+  _FontHelvr10_char_34
+                                  fff0204c         a   data ,g         1
+  _FontHelvr10_char_35
+                                  fff02056         e   data ,g         1
+  _FontHelvr10_char_36
+                                  fff02064         e   data ,g         1
+  _FontHelvr10_char_37
+                                  fff02072        14   data ,g         1
+  _FontHelvr10_char_38
+                                  fff02086        12   data ,g         1
+  _FontHelvr10_char_39
+                                  fff02098         8   data ,g         1
+  _FontHelvr10_char_40
+                                  fff020a0         a   data ,g         1
+  _FontHelvr10_char_41
+                                  fff020aa         a   data ,g         1
+  _FontHelvr10_char_42
+                                  fff020b4         a   data ,g         1
+  _FontHelvr10_char_43
+                                  fff020be         e   data ,g         1
+  _FontHelvr10_char_44
+                                  fff020cc         8   data ,g         1
+  _FontHelvr10_char_45
+                                  fff020d4        10   data ,g         1
+  _FontHelvr10_char_46
+                                  fff020e4         8   data ,g         1
+  _FontHelvr10_char_47
+                                  fff020ec         8   data ,g         1
+  _FontHelvr10_char_48
+                                  fff020f4         e   data ,g         1
+  _FontHelvr10_char_49
+                                  fff02102         e   data ,g         1
+  _FontHelvr10_char_50
+                                  fff02110         e   data ,g         1
+  _FontHelvr10_char_51
+                                  fff0211e         e   data ,g         1
+  _FontHelvr10_char_52
+                                  fff0212c         e   data ,g         1
+  _FontHelvr10_char_53
+                                  fff0213a         e   data ,g         1
+  _FontHelvr10_char_54
+                                  fff02148         e   data ,g         1
+  _FontHelvr10_char_55
+                                  fff02156         e   data ,g         1
+  _FontHelvr10_char_56
+                                  fff02164         e   data ,g         1
+  _FontHelvr10_char_57
+                                  fff02172         e   data ,g         1
+  _FontHelvr10_char_58
+                                  fff02180         8   data ,g         1
+  _FontHelvr10_char_59
+                                  fff02188         8   data ,g         1
+  _FontHelvr10_char_60
+                                  fff02190         e   data ,g         1
+  _FontHelvr10_char_61
+                                  fff0219e         c   data ,g         1
+  _FontHelvr10_char_62
+                                  fff021aa         e   data ,g         1
+  _FontHelvr10_char_63
+                                  fff021b8         e   data ,g         1
+  _FontHelvr10_char_64
+                                  fff021c6        18   data ,g         1
+  _FontHelvr10_char_65
+                                  fff021de        10   data ,g         1
+  _FontHelvr10_char_66
+                                  fff021ee        10   data ,g         1
+  _FontHelvr10_char_67
+                                  fff021fe        12   data ,g         1
+  _FontHelvr10_char_68
+                                  fff02210        12   data ,g         1
+  _FontHelvr10_char_69
+                                  fff02222        10   data ,g         1
+  _FontHelvr10_char_70
+                                  fff02232         e   data ,g         1
+  _FontHelvr10_char_71
+                                  fff02240        12   data ,g         1
+  _FontHelvr10_char_72
+                                  fff02252        12   data ,g         1
+  _FontHelvr10_char_73
+                                  fff02264         8   data ,g         1
+  _FontHelvr10_char_74
+                                  fff0226c         c   data ,g         1
+  _FontHelvr10_char_75
+                                  fff02278        10   data ,g         1
+  _FontHelvr10_char_76
+                                  fff02288         e   data ,g         1
+  _FontHelvr10_char_77
+                                  fff02296        14   data ,g         1
+  _FontHelvr10_char_78
+                                  fff022aa        12   data ,g         1
+  _FontHelvr10_char_79
+                                  fff022bc        12   data ,g         1
+  _FontHelvr10_char_80
+                                  fff022ce        10   data ,g         1
+  _FontHelvr10_char_81
+                                  fff022de        12   data ,g         1
+  _FontHelvr10_char_82
+                                  fff022f0        10   data ,g         1
+  _FontHelvr10_char_83
+                                  fff02300        10   data ,g         1
+  _FontHelvr10_char_84
+                                  fff02310         c   data ,g         1
+  _FontHelvr10_char_85
+                                  fff0231c        12   data ,g         1
+  _FontHelvr10_char_86
+                                  fff0232e        10   data ,g         1
+  _FontHelvr10_char_87
+                                  fff0233e        14   data ,g         1
+  _FontHelvr10_char_88
+                                  fff02352        10   data ,g         1
+  _FontHelvr10_char_89
+                                  fff02362        10   data ,g         1
+  _FontHelvr10_char_90
+                                  fff02372        10   data ,g         1
+  _FontHelvr10_char_91
+                                  fff02382         8   data ,g         1
+  _FontHelvr10_char_92
+                                  fff0238a         8   data ,g         1
+  _FontHelvr10_char_93
+                                  fff02392         8   data ,g         1
+  _FontHelvr10_char_94
+                                  fff0239a         e   data ,g         1
+  _FontHelvr10_char_95
+                                  fff023a8         e   data ,g         1
+  _FontHelvr10_char_96
+                                  fff023b6         8   data ,g         1
+  _FontHelvr10_char_97
+                                  fff023be         c   data ,g         1
+  _FontHelvr10_char_98
+                                  fff023ca         e   data ,g         1
+  _FontHelvr10_char_99
+                                  fff023d8         c   data ,g         1
+  _FontHelvr10_char_100
+                                  fff023e4         e   data ,g         1
+  _FontHelvr10_char_101
+                                  fff023f2         c   data ,g         1
+  _FontHelvr10_char_102
+                                  fff023fe         a   data ,g         1
+  _FontHelvr10_char_103
+                                  fff02408         e   data ,g         1
+  _FontHelvr10_char_104
+                                  fff02416         e   data ,g         1
+  _FontHelvr10_char_105
+                                  fff02424         6   data ,g         1
+  _FontHelvr10_char_106
+                                  fff0242a         6   data ,g         1
+  _FontHelvr10_char_107
+                                  fff02430         c   data ,g         1
+  _FontHelvr10_char_108
+                                  fff0243c         6   data ,g         1
+  _FontHelvr10_char_109
+                                  fff02442        12   data ,g         1
+  _FontHelvr10_char_110
+                                  fff02454         e   data ,g         1
+  _FontHelvr10_char_111
+                                  fff02462         e   data ,g         1
+  _FontHelvr10_char_112
+                                  fff02470         e   data ,g         1
+  _FontHelvr10_char_113
+                                  fff0247e         e   data ,g         1
+  _FontHelvr10_char_114
+                                  fff0248c         a   data ,g         1
+  _FontHelvr10_char_115
+                                  fff02496         c   data ,g         1
+  _FontHelvr10_char_116
+                                  fff024a2         a   data ,g         1
+  _FontHelvr10_char_117
+                                  fff024ac         c   data ,g         1
+  _FontHelvr10_char_118
+                                  fff024b8         e   data ,g         1
+  _FontHelvr10_char_119
+                                  fff024c6        12   data ,g         1
+  _FontHelvr10_char_120
+                                  fff024d8         e   data ,g         1
+  _FontHelvr10_char_121
+                                  fff024e6         c   data ,g         1
+  _FontHelvr10_char_122
+                                  fff024f2         c   data ,g         1
+  _FontHelvr10_char_123
+                                  fff024fe         8   data ,g         1
+  _FontHelvr10_char_124
+                                  fff02506         8   data ,g         1
+  _FontHelvr10_char_125
+                                  fff0250e         8   data ,g         1
+  _FontHelvr10_char_126
+                                  fff02516        10   data ,g         1
+FILE=.\r_glyph\src\glyph\fonts\font_winfreesystem14x16.obj
+                                  fff02526  fff02a0f       4ea
+  _FontWinFreeSystem14x16_char_32
+                                  fff02526         8   data ,g         1
+  _FontWinFreeSystem14x16_char_33
+                                  fff0252e         8   data ,g         1
+  _FontWinFreeSystem14x16_char_34
+                                  fff02536         a   data ,g         1
+  _FontWinFreeSystem14x16_char_35
+                                  fff02540         e   data ,g         1
+  _FontWinFreeSystem14x16_char_36
+                                  fff0254e         e   data ,g         1
+  _FontWinFreeSystem14x16_char_37
+                                  fff0255c        14   data ,g         1
+  _FontWinFreeSystem14x16_char_38
+                                  fff02570        12   data ,g         1
+  _FontWinFreeSystem14x16_char_39
+                                  fff02582         8   data ,g         1
+  _FontWinFreeSystem14x16_char_40
+                                  fff0258a         a   data ,g         1
+  _FontWinFreeSystem14x16_char_41
+                                  fff02594         a   data ,g         1
+  _FontWinFreeSystem14x16_char_42
+                                  fff0259e         a   data ,g         1
+  _FontWinFreeSystem14x16_char_43
+                                  fff025a8         e   data ,g         1
+  _FontWinFreeSystem14x16_char_44
+                                  fff025b6         8   data ,g         1
+  _FontWinFreeSystem14x16_char_45
+                                  fff025be        10   data ,g         1
+  _FontWinFreeSystem14x16_char_46
+                                  fff025ce         8   data ,g         1
+  _FontWinFreeSystem14x16_char_47
+                                  fff025d6         8   data ,g         1
+  _FontWinFreeSystem14x16_char_48
+                                  fff025de         e   data ,g         1
+  _FontWinFreeSystem14x16_char_49
+                                  fff025ec         e   data ,g         1
+  _FontWinFreeSystem14x16_char_50
+                                  fff025fa         e   data ,g         1
+  _FontWinFreeSystem14x16_char_51
+                                  fff02608         e   data ,g         1
+  _FontWinFreeSystem14x16_char_52
+                                  fff02616         e   data ,g         1
+  _FontWinFreeSystem14x16_char_53
+                                  fff02624         e   data ,g         1
+  _FontWinFreeSystem14x16_char_54
+                                  fff02632         e   data ,g         1
+  _FontWinFreeSystem14x16_char_55
+                                  fff02640         e   data ,g         1
+  _FontWinFreeSystem14x16_char_56
+                                  fff0264e         e   data ,g         1
+  _FontWinFreeSystem14x16_char_57
+                                  fff0265c         e   data ,g         1
+  _FontWinFreeSystem14x16_char_58
+                                  fff0266a         8   data ,g         1
+  _FontWinFreeSystem14x16_char_59
+                                  fff02672         8   data ,g         1
+  _FontWinFreeSystem14x16_char_60
+                                  fff0267a         e   data ,g         1
+  _FontWinFreeSystem14x16_char_61
+                                  fff02688         c   data ,g         1
+  _FontWinFreeSystem14x16_char_62
+                                  fff02694         e   data ,g         1
+  _FontWinFreeSystem14x16_char_63
+                                  fff026a2         e   data ,g         1
+  _FontWinFreeSystem14x16_char_64
+                                  fff026b0        18   data ,g         1
+  _FontWinFreeSystem14x16_char_65
+                                  fff026c8        10   data ,g         1
+  _FontWinFreeSystem14x16_char_66
+                                  fff026d8        10   data ,g         1
+  _FontWinFreeSystem14x16_char_67
+                                  fff026e8        12   data ,g         1
+  _FontWinFreeSystem14x16_char_68
+                                  fff026fa        12   data ,g         1
+  _FontWinFreeSystem14x16_char_69
+                                  fff0270c        10   data ,g         1
+  _FontWinFreeSystem14x16_char_70
+                                  fff0271c         e   data ,g         1
+  _FontWinFreeSystem14x16_char_71
+                                  fff0272a        12   data ,g         1
+  _FontWinFreeSystem14x16_char_72
+                                  fff0273c        12   data ,g         1
+  _FontWinFreeSystem14x16_char_73
+                                  fff0274e         8   data ,g         1
+  _FontWinFreeSystem14x16_char_74
+                                  fff02756         c   data ,g         1
+  _FontWinFreeSystem14x16_char_75
+                                  fff02762        10   data ,g         1
+  _FontWinFreeSystem14x16_char_76
+                                  fff02772         e   data ,g         1
+  _FontWinFreeSystem14x16_char_77
+                                  fff02780        14   data ,g         1
+  _FontWinFreeSystem14x16_char_78
+                                  fff02794        12   data ,g         1
+  _FontWinFreeSystem14x16_char_79
+                                  fff027a6        12   data ,g         1
+  _FontWinFreeSystem14x16_char_80
+                                  fff027b8        10   data ,g         1
+  _FontWinFreeSystem14x16_char_81
+                                  fff027c8        12   data ,g         1
+  _FontWinFreeSystem14x16_char_82
+                                  fff027da        10   data ,g         1
+  _FontWinFreeSystem14x16_char_83
+                                  fff027ea        10   data ,g         1
+  _FontWinFreeSystem14x16_char_84
+                                  fff027fa         c   data ,g         1
+  _FontWinFreeSystem14x16_char_85
+                                  fff02806        12   data ,g         1
+  _FontWinFreeSystem14x16_char_86
+                                  fff02818        10   data ,g         1
+  _FontWinFreeSystem14x16_char_87
+                                  fff02828        14   data ,g         1
+  _FontWinFreeSystem14x16_char_88
+                                  fff0283c        10   data ,g         1
+  _FontWinFreeSystem14x16_char_89
+                                  fff0284c        10   data ,g         1
+  _FontWinFreeSystem14x16_char_90
+                                  fff0285c        10   data ,g         1
+  _FontWinFreeSystem14x16_char_91
+                                  fff0286c         8   data ,g         1
+  _FontWinFreeSystem14x16_char_92
+                                  fff02874         8   data ,g         1
+  _FontWinFreeSystem14x16_char_93
+                                  fff0287c         8   data ,g         1
+  _FontWinFreeSystem14x16_char_94
+                                  fff02884         e   data ,g         1
+  _FontWinFreeSystem14x16_char_95
+                                  fff02892         e   data ,g         1
+  _FontWinFreeSystem14x16_char_96
+                                  fff028a0         8   data ,g         1
+  _FontWinFreeSystem14x16_char_97
+                                  fff028a8         c   data ,g         1
+  _FontWinFreeSystem14x16_char_98
+                                  fff028b4         e   data ,g         1
+  _FontWinFreeSystem14x16_char_99
+                                  fff028c2         c   data ,g         1
+  _FontWinFreeSystem14x16_char_100
+                                  fff028ce         e   data ,g         1
+  _FontWinFreeSystem14x16_char_101
+                                  fff028dc         c   data ,g         1
+  _FontWinFreeSystem14x16_char_102
+                                  fff028e8         a   data ,g         1
+  _FontWinFreeSystem14x16_char_103
+                                  fff028f2         e   data ,g         1
+  _FontWinFreeSystem14x16_char_104
+                                  fff02900         e   data ,g         1
+  _FontWinFreeSystem14x16_char_105
+                                  fff0290e         6   data ,g         1
+  _FontWinFreeSystem14x16_char_106
+                                  fff02914         6   data ,g         1
+  _FontWinFreeSystem14x16_char_107
+                                  fff0291a         c   data ,g         1
+  _FontWinFreeSystem14x16_char_108
+                                  fff02926         6   data ,g         1
+  _FontWinFreeSystem14x16_char_109
+                                  fff0292c        12   data ,g         1
+  _FontWinFreeSystem14x16_char_110
+                                  fff0293e         e   data ,g         1
+  _FontWinFreeSystem14x16_char_111
+                                  fff0294c         e   data ,g         1
+  _FontWinFreeSystem14x16_char_112
+                                  fff0295a         e   data ,g         1
+  _FontWinFreeSystem14x16_char_113
+                                  fff02968         e   data ,g         1
+  _FontWinFreeSystem14x16_char_114
+                                  fff02976         a   data ,g         1
+  _FontWinFreeSystem14x16_char_115
+                                  fff02980         c   data ,g         1
+  _FontWinFreeSystem14x16_char_116
+                                  fff0298c         a   data ,g         1
+  _FontWinFreeSystem14x16_char_117
+                                  fff02996         c   data ,g         1
+  _FontWinFreeSystem14x16_char_118
+                                  fff029a2         e   data ,g         1
+  _FontWinFreeSystem14x16_char_119
+                                  fff029b0        12   data ,g         1
+  _FontWinFreeSystem14x16_char_120
+                                  fff029c2         e   data ,g         1
+  _FontWinFreeSystem14x16_char_121
+                                  fff029d0         c   data ,g         1
+  _FontWinFreeSystem14x16_char_122
+                                  fff029dc         c   data ,g         1
+  _FontWinFreeSystem14x16_char_123
+                                  fff029e8         8   data ,g         1
+  _FontWinFreeSystem14x16_char_124
+                                  fff029f0         8   data ,g         1
+  _FontWinFreeSystem14x16_char_125
+                                  fff029f8         8   data ,g         1
+  _FontWinFreeSystem14x16_char_126
+                                  fff02a00        10   data ,g         1
+FILE=.\r_glyph\src\glyph\fonts\font_x5x7.obj
+                                  fff02a10  fff02d88       379
+  _Fontx5x7_char_0
+                                  fff02a10         7   data ,g         1
+  _Fontx5x7_char_1
+                                  fff02a17         7   data ,g         1
+  _Fontx5x7_char_2
+                                  fff02a1e         7   data ,g         1
+  _Fontx5x7_char_3
+                                  fff02a25         7   data ,g         1
+  _Fontx5x7_char_4
+                                  fff02a2c         7   data ,g         1
+  _Fontx5x7_char_5
+                                  fff02a33         7   data ,g         1
+  _Fontx5x7_char_6
+                                  fff02a3a         7   data ,g         1
+  _Fontx5x7_char_7
+                                  fff02a41         7   data ,g         1
+  _Fontx5x7_char_8
+                                  fff02a48         7   data ,g         1
+  _Fontx5x7_char_9
+                                  fff02a4f         7   data ,g         1
+  _Fontx5x7_char_10
+                                  fff02a56         7   data ,g         1
+  _Fontx5x7_char_11
+                                  fff02a5d         7   data ,g         1
+  _Fontx5x7_char_12
+                                  fff02a64         7   data ,g         1
+  _Fontx5x7_char_13
+                                  fff02a6b         7   data ,g         1
+  _Fontx5x7_char_14
+                                  fff02a72         7   data ,g         1
+  _Fontx5x7_char_15
+                                  fff02a79         7   data ,g         1
+  _Fontx5x7_char_16
+                                  fff02a80         7   data ,g         1
+  _Fontx5x7_char_17
+                                  fff02a87         7   data ,g         1
+  _Fontx5x7_char_18
+                                  fff02a8e         7   data ,g         1
+  _Fontx5x7_char_19
+                                  fff02a95         7   data ,g         1
+  _Fontx5x7_char_20
+                                  fff02a9c         7   data ,g         1
+  _Fontx5x7_char_21
+                                  fff02aa3         7   data ,g         1
+  _Fontx5x7_char_22
+                                  fff02aaa         7   data ,g         1
+  _Fontx5x7_char_23
+                                  fff02ab1         7   data ,g         1
+  _Fontx5x7_char_24
+                                  fff02ab8         7   data ,g         1
+  _Fontx5x7_char_25
+                                  fff02abf         7   data ,g         1
+  _Fontx5x7_char_26
+                                  fff02ac6         7   data ,g         1
+  _Fontx5x7_char_27
+                                  fff02acd         7   data ,g         1
+  _Fontx5x7_char_28
+                                  fff02ad4         7   data ,g         1
+  _Fontx5x7_char_29
+                                  fff02adb         7   data ,g         1
+  _Fontx5x7_char_30
+                                  fff02ae2         7   data ,g         1
+  _Fontx5x7_char_31
+                                  fff02ae9         7   data ,g         1
+  _Fontx5x7_char_32
+                                  fff02af0         7   data ,g         1
+  _Fontx5x7_char_33
+                                  fff02af7         7   data ,g         1
+  _Fontx5x7_char_34
+                                  fff02afe         7   data ,g         1
+  _Fontx5x7_char_35
+                                  fff02b05         7   data ,g         1
+  _Fontx5x7_char_36
+                                  fff02b0c         7   data ,g         1
+  _Fontx5x7_char_37
+                                  fff02b13         7   data ,g         1
+  _Fontx5x7_char_38
+                                  fff02b1a         7   data ,g         1
+  _Fontx5x7_char_39
+                                  fff02b21         7   data ,g         1
+  _Fontx5x7_char_40
+                                  fff02b28         7   data ,g         1
+  _Fontx5x7_char_41
+                                  fff02b2f         7   data ,g         1
+  _Fontx5x7_char_42
+                                  fff02b36         7   data ,g         1
+  _Fontx5x7_char_43
+                                  fff02b3d         7   data ,g         1
+  _Fontx5x7_char_44
+                                  fff02b44         7   data ,g         1
+  _Fontx5x7_char_45
+                                  fff02b4b         7   data ,g         1
+  _Fontx5x7_char_46
+                                  fff02b52         7   data ,g         1
+  _Fontx5x7_char_47
+                                  fff02b59         7   data ,g         1
+  _Fontx5x7_char_48
+                                  fff02b60         7   data ,g         1
+  _Fontx5x7_char_49
+                                  fff02b67         7   data ,g         1
+  _Fontx5x7_char_50
+                                  fff02b6e         7   data ,g         1
+  _Fontx5x7_char_51
+                                  fff02b75         7   data ,g         1
+  _Fontx5x7_char_52
+                                  fff02b7c         7   data ,g         1
+  _Fontx5x7_char_53
+                                  fff02b83         7   data ,g         1
+  _Fontx5x7_char_54
+                                  fff02b8a         7   data ,g         1
+  _Fontx5x7_char_55
+                                  fff02b91         7   data ,g         1
+  _Fontx5x7_char_56
+                                  fff02b98         7   data ,g         1
+  _Fontx5x7_char_57
+                                  fff02b9f         7   data ,g         1
+  _Fontx5x7_char_58
+                                  fff02ba6         7   data ,g         1
+  _Fontx5x7_char_59
+                                  fff02bad         7   data ,g         1
+  _Fontx5x7_char_60
+                                  fff02bb4         7   data ,g         1
+  _Fontx5x7_char_61
+                                  fff02bbb         7   data ,g         1
+  _Fontx5x7_char_62
+                                  fff02bc2         7   data ,g         1
+  _Fontx5x7_char_63
+                                  fff02bc9         7   data ,g         1
+  _Fontx5x7_char_64
+                                  fff02bd0         7   data ,g         1
+  _Fontx5x7_char_65
+                                  fff02bd7         7   data ,g         1
+  _Fontx5x7_char_66
+                                  fff02bde         7   data ,g         1
+  _Fontx5x7_char_67
+                                  fff02be5         7   data ,g         1
+  _Fontx5x7_char_68
+                                  fff02bec         7   data ,g         1
+  _Fontx5x7_char_69
+                                  fff02bf3         7   data ,g         1
+  _Fontx5x7_char_70
+                                  fff02bfa         7   data ,g         1
+  _Fontx5x7_char_71
+                                  fff02c01         7   data ,g         1
+  _Fontx5x7_char_72
+                                  fff02c08         7   data ,g         1
+  _Fontx5x7_char_73
+                                  fff02c0f         7   data ,g         1
+  _Fontx5x7_char_74
+                                  fff02c16         7   data ,g         1
+  _Fontx5x7_char_75
+                                  fff02c1d         7   data ,g         1
+  _Fontx5x7_char_76
+                                  fff02c24         7   data ,g         1
+  _Fontx5x7_char_77
+                                  fff02c2b         7   data ,g         1
+  _Fontx5x7_char_78
+                                  fff02c32         7   data ,g         1
+  _Fontx5x7_char_79
+                                  fff02c39         7   data ,g         1
+  _Fontx5x7_char_80
+                                  fff02c40         7   data ,g         1
+  _Fontx5x7_char_81
+                                  fff02c47         7   data ,g         1
+  _Fontx5x7_char_82
+                                  fff02c4e         7   data ,g         1
+  _Fontx5x7_char_83
+                                  fff02c55         7   data ,g         1
+  _Fontx5x7_char_84
+                                  fff02c5c         7   data ,g         1
+  _Fontx5x7_char_85
+                                  fff02c63         7   data ,g         1
+  _Fontx5x7_char_86
+                                  fff02c6a         7   data ,g         1
+  _Fontx5x7_char_87
+                                  fff02c71         7   data ,g         1
+  _Fontx5x7_char_88
+                                  fff02c78         7   data ,g         1
+  _Fontx5x7_char_89
+                                  fff02c7f         7   data ,g         1
+  _Fontx5x7_char_90
+                                  fff02c86         7   data ,g         1
+  _Fontx5x7_char_91
+                                  fff02c8d         7   data ,g         1
+  _Fontx5x7_char_92
+                                  fff02c94         7   data ,g         1
+  _Fontx5x7_char_93
+                                  fff02c9b         7   data ,g         1
+  _Fontx5x7_char_94
+                                  fff02ca2         7   data ,g         1
+  _Fontx5x7_char_95
+                                  fff02ca9         7   data ,g         1
+  _Fontx5x7_char_96
+                                  fff02cb0         7   data ,g         1
+  _Fontx5x7_char_97
+                                  fff02cb7         7   data ,g         1
+  _Fontx5x7_char_98
+                                  fff02cbe         7   data ,g         1
+  _Fontx5x7_char_99
+                                  fff02cc5         7   data ,g         1
+  _Fontx5x7_char_100
+                                  fff02ccc         7   data ,g         1
+  _Fontx5x7_char_101
+                                  fff02cd3         7   data ,g         1
+  _Fontx5x7_char_102
+                                  fff02cda         7   data ,g         1
+  _Fontx5x7_char_103
+                                  fff02ce1         7   data ,g         1
+  _Fontx5x7_char_104
+                                  fff02ce8         7   data ,g         1
+  _Fontx5x7_char_105
+                                  fff02cef         7   data ,g         1
+  _Fontx5x7_char_106
+                                  fff02cf6         7   data ,g         1
+  _Fontx5x7_char_107
+                                  fff02cfd         7   data ,g         1
+  _Fontx5x7_char_108
+                                  fff02d04         7   data ,g         1
+  _Fontx5x7_char_109
+                                  fff02d0b         7   data ,g         1
+  _Fontx5x7_char_110
+                                  fff02d12         7   data ,g         1
+  _Fontx5x7_char_111
+                                  fff02d19         7   data ,g         1
+  _Fontx5x7_char_112
+                                  fff02d20         7   data ,g         1
+  _Fontx5x7_char_113
+                                  fff02d27         7   data ,g         1
+  _Fontx5x7_char_114
+                                  fff02d2e         7   data ,g         1
+  _Fontx5x7_char_115
+                                  fff02d35         7   data ,g         1
+  _Fontx5x7_char_116
+                                  fff02d3c         7   data ,g         1
+  _Fontx5x7_char_117
+                                  fff02d43         7   data ,g         1
+  _Fontx5x7_char_118
+                                  fff02d4a         7   data ,g         1
+  _Fontx5x7_char_119
+                                  fff02d51         7   data ,g         1
+  _Fontx5x7_char_120
+                                  fff02d58         7   data ,g         1
+  _Fontx5x7_char_121
+                                  fff02d5f         7   data ,g         1
+  _Fontx5x7_char_122
+                                  fff02d66         7   data ,g         1
+  _Fontx5x7_char_123
+                                  fff02d6d         7   data ,g         1
+  _Fontx5x7_char_124
+                                  fff02d74         7   data ,g         1
+  _Fontx5x7_char_125
+                                  fff02d7b         7   data ,g         1
+  _Fontx5x7_char_126
+                                  fff02d82         7   data ,g         1
+FILE=.\r_glyph\src\glyph\fonts\font_x6x13.obj
+                                  fff02d89  fff0347a       6f2
+  _Fontx6x13_char_0
+                                  fff02d89         e   data ,g         1
+  _Fontx6x13_char_1
+                                  fff02d97         e   data ,g         1
+  _Fontx6x13_char_2
+                                  fff02da5         e   data ,g         1
+  _Fontx6x13_char_3
+                                  fff02db3         e   data ,g         1
+  _Fontx6x13_char_4
+                                  fff02dc1         e   data ,g         1
+  _Fontx6x13_char_5
+                                  fff02dcf         e   data ,g         1
+  _Fontx6x13_char_6
+                                  fff02ddd         e   data ,g         1
+  _Fontx6x13_char_7
+                                  fff02deb         e   data ,g         1
+  _Fontx6x13_char_8
+                                  fff02df9         e   data ,g         1
+  _Fontx6x13_char_9
+                                  fff02e07         e   data ,g         1
+  _Fontx6x13_char_10
+                                  fff02e15         e   data ,g         1
+  _Fontx6x13_char_11
+                                  fff02e23         e   data ,g         1
+  _Fontx6x13_char_12
+                                  fff02e31         e   data ,g         1
+  _Fontx6x13_char_13
+                                  fff02e3f         e   data ,g         1
+  _Fontx6x13_char_14
+                                  fff02e4d         e   data ,g         1
+  _Fontx6x13_char_15
+                                  fff02e5b         e   data ,g         1
+  _Fontx6x13_char_16
+                                  fff02e69         e   data ,g         1
+  _Fontx6x13_char_17
+                                  fff02e77         e   data ,g         1
+  _Fontx6x13_char_18
+                                  fff02e85         e   data ,g         1
+  _Fontx6x13_char_19
+                                  fff02e93         e   data ,g         1
+  _Fontx6x13_char_20
+                                  fff02ea1         e   data ,g         1
+  _Fontx6x13_char_21
+                                  fff02eaf         e   data ,g         1
+  _Fontx6x13_char_22
+                                  fff02ebd         e   data ,g         1
+  _Fontx6x13_char_23
+                                  fff02ecb         e   data ,g         1
+  _Fontx6x13_char_24
+                                  fff02ed9         e   data ,g         1
+  _Fontx6x13_char_25
+                                  fff02ee7         e   data ,g         1
+  _Fontx6x13_char_26
+                                  fff02ef5         e   data ,g         1
+  _Fontx6x13_char_27
+                                  fff02f03         e   data ,g         1
+  _Fontx6x13_char_28
+                                  fff02f11         e   data ,g         1
+  _Fontx6x13_char_29
+                                  fff02f1f         e   data ,g         1
+  _Fontx6x13_char_30
+                                  fff02f2d         e   data ,g         1
+  _Fontx6x13_char_31
+                                  fff02f3b         e   data ,g         1
+  _Fontx6x13_char_32
+                                  fff02f49         e   data ,g         1
+  _Fontx6x13_char_33
+                                  fff02f57         e   data ,g         1
+  _Fontx6x13_char_34
+                                  fff02f65         e   data ,g         1
+  _Fontx6x13_char_35
+                                  fff02f73         e   data ,g         1
+  _Fontx6x13_char_36
+                                  fff02f81         e   data ,g         1
+  _Fontx6x13_char_37
+                                  fff02f8f         e   data ,g         1
+  _Fontx6x13_char_38
+                                  fff02f9d         e   data ,g         1
+  _Fontx6x13_char_39
+                                  fff02fab         e   data ,g         1
+  _Fontx6x13_char_40
+                                  fff02fb9         e   data ,g         1
+  _Fontx6x13_char_41
+                                  fff02fc7         e   data ,g         1
+  _Fontx6x13_char_42
+                                  fff02fd5         e   data ,g         1
+  _Fontx6x13_char_43
+                                  fff02fe3         e   data ,g         1
+  _Fontx6x13_char_44
+                                  fff02ff1         e   data ,g         1
+  _Fontx6x13_char_45
+                                  fff02fff         e   data ,g         1
+  _Fontx6x13_char_46
+                                  fff0300d         e   data ,g         1
+  _Fontx6x13_char_47
+                                  fff0301b         e   data ,g         1
+  _Fontx6x13_char_48
+                                  fff03029         e   data ,g         1
+  _Fontx6x13_char_49
+                                  fff03037         e   data ,g         1
+  _Fontx6x13_char_50
+                                  fff03045         e   data ,g         1
+  _Fontx6x13_char_51
+                                  fff03053         e   data ,g         1
+  _Fontx6x13_char_52
+                                  fff03061         e   data ,g         1
+  _Fontx6x13_char_53
+                                  fff0306f         e   data ,g         1
+  _Fontx6x13_char_54
+                                  fff0307d         e   data ,g         1
+  _Fontx6x13_char_55
+                                  fff0308b         e   data ,g         1
+  _Fontx6x13_char_56
+                                  fff03099         e   data ,g         1
+  _Fontx6x13_char_57
+                                  fff030a7         e   data ,g         1
+  _Fontx6x13_char_58
+                                  fff030b5         e   data ,g         1
+  _Fontx6x13_char_59
+                                  fff030c3         e   data ,g         1
+  _Fontx6x13_char_60
+                                  fff030d1         e   data ,g         1
+  _Fontx6x13_char_61
+                                  fff030df         e   data ,g         1
+  _Fontx6x13_char_62
+                                  fff030ed         e   data ,g         1
+  _Fontx6x13_char_63
+                                  fff030fb         e   data ,g         1
+  _Fontx6x13_char_64
+                                  fff03109         e   data ,g         1
+  _Fontx6x13_char_65
+                                  fff03117         e   data ,g         1
+  _Fontx6x13_char_66
+                                  fff03125         e   data ,g         1
+  _Fontx6x13_char_67
+                                  fff03133         e   data ,g         1
+  _Fontx6x13_char_68
+                                  fff03141         e   data ,g         1
+  _Fontx6x13_char_69
+                                  fff0314f         e   data ,g         1
+  _Fontx6x13_char_70
+                                  fff0315d         e   data ,g         1
+  _Fontx6x13_char_71
+                                  fff0316b         e   data ,g         1
+  _Fontx6x13_char_72
+                                  fff03179         e   data ,g         1
+  _Fontx6x13_char_73
+                                  fff03187         e   data ,g         1
+  _Fontx6x13_char_74
+                                  fff03195         e   data ,g         1
+  _Fontx6x13_char_75
+                                  fff031a3         e   data ,g         1
+  _Fontx6x13_char_76
+                                  fff031b1         e   data ,g         1
+  _Fontx6x13_char_77
+                                  fff031bf         e   data ,g         1
+  _Fontx6x13_char_78
+                                  fff031cd         e   data ,g         1
+  _Fontx6x13_char_79
+                                  fff031db         e   data ,g         1
+  _Fontx6x13_char_80
+                                  fff031e9         e   data ,g         1
+  _Fontx6x13_char_81
+                                  fff031f7         e   data ,g         1
+  _Fontx6x13_char_82
+                                  fff03205         e   data ,g         1
+  _Fontx6x13_char_83
+                                  fff03213         e   data ,g         1
+  _Fontx6x13_char_84
+                                  fff03221         e   data ,g         1
+  _Fontx6x13_char_85
+                                  fff0322f         e   data ,g         1
+  _Fontx6x13_char_86
+                                  fff0323d         e   data ,g         1
+  _Fontx6x13_char_87
+                                  fff0324b         e   data ,g         1
+  _Fontx6x13_char_88
+                                  fff03259         e   data ,g         1
+  _Fontx6x13_char_89
+                                  fff03267         e   data ,g         1
+  _Fontx6x13_char_90
+                                  fff03275         e   data ,g         1
+  _Fontx6x13_char_91
+                                  fff03283         e   data ,g         1
+  _Fontx6x13_char_92
+                                  fff03291         e   data ,g         1
+  _Fontx6x13_char_93
+                                  fff0329f         e   data ,g         1
+  _Fontx6x13_char_94
+                                  fff032ad         e   data ,g         1
+  _Fontx6x13_char_95
+                                  fff032bb         e   data ,g         1
+  _Fontx6x13_char_96
+                                  fff032c9         e   data ,g         1
+  _Fontx6x13_char_97
+                                  fff032d7         e   data ,g         1
+  _Fontx6x13_char_98
+                                  fff032e5         e   data ,g         1
+  _Fontx6x13_char_99
+                                  fff032f3         e   data ,g         1
+  _Fontx6x13_char_100
+                                  fff03301         e   data ,g         1
+  _Fontx6x13_char_101
+                                  fff0330f         e   data ,g         1
+  _Fontx6x13_char_102
+                                  fff0331d         e   data ,g         1
+  _Fontx6x13_char_103
+                                  fff0332b         e   data ,g         1
+  _Fontx6x13_char_104
+                                  fff03339         e   data ,g         1
+  _Fontx6x13_char_105
+                                  fff03347         e   data ,g         1
+  _Fontx6x13_char_106
+                                  fff03355         e   data ,g         1
+  _Fontx6x13_char_107
+                                  fff03363         e   data ,g         1
+  _Fontx6x13_char_108
+                                  fff03371         e   data ,g         1
+  _Fontx6x13_char_109
+                                  fff0337f         e   data ,g         1
+  _Fontx6x13_char_110
+                                  fff0338d         e   data ,g         1
+  _Fontx6x13_char_111
+                                  fff0339b         e   data ,g         1
+  _Fontx6x13_char_112
+                                  fff033a9         e   data ,g         1
+  _Fontx6x13_char_113
+                                  fff033b7         e   data ,g         1
+  _Fontx6x13_char_114
+                                  fff033c5         e   data ,g         1
+  _Fontx6x13_char_115
+                                  fff033d3         e   data ,g         1
+  _Fontx6x13_char_116
+                                  fff033e1         e   data ,g         1
+  _Fontx6x13_char_117
+                                  fff033ef         e   data ,g         1
+  _Fontx6x13_char_118
+                                  fff033fd         e   data ,g         1
+  _Fontx6x13_char_119
+                                  fff0340b         e   data ,g         1
+  _Fontx6x13_char_120
+                                  fff03419         e   data ,g         1
+  _Fontx6x13_char_121
+                                  fff03427         e   data ,g         1
+  _Fontx6x13_char_122
+                                  fff03435         e   data ,g         1
+  _Fontx6x13_char_123
+                                  fff03443         e   data ,g         1
+  _Fontx6x13_char_124
+                                  fff03451         e   data ,g         1
+  _Fontx6x13_char_125
+                                  fff0345f         e   data ,g         1
+  _Fontx6x13_char_126
+                                  fff0346d         e   data ,g         1
+FILE=.\r_gpio_rx\src\targets\rx63n\r_gpio_rx63n.obj
+                                  fff0347b  fff034c6        4c
+  _g_gpio_open_drain_n_support
+                                  fff0347b        13   data ,g         1
+  _g_gpio_open_drain_p_support
+                                  fff0348e        13   data ,g         1
+  _g_gpio_pull_up_support
+                                  fff034a1        13   data ,g         1
+  _g_gpio_dscr_support
+                                  fff034b4        13   data ,g         1
+FILE=xprintf
+                                  fff034c7  fff034d0         a
+  _fchar$1
+                                  fff034c7         a   data ,l         1
+FILE=xputtxt
+                                  fff034d1  fff03575        a5
+  _spaces
+                                  fff034d1        21   data ,l         1
+  _zeroes
+                                  fff034f2        21   data ,l         1
+  _asterisk
+                                  fff03513        21   data ,l         1
+  _plus
+                                  fff03534        21   data ,l         1
+  _minus
+                                  fff03555        21   data ,l         1
+FILE=xlitob
+                                  fff03576  fff03597        22
+  _ldigs
+                                  fff03576        11   data ,l         1
+  _udigs
+                                  fff03587        11   data ,l         1
+FILE=localeco
+                                  fff03598  fff03598         1
+  _null
+                                  fff03598         1   data ,l         d
+
+SECTION=C_2
+FILE=.\r_bsp\mcu\rx63n\cpu.obj
+                                  fff0359a  fff0359f         6
+  _g_prcr_masks
+                                  fff0359a         6   data ,l         2
+FILE=xctype
+                                  fff035a0  fff037a1       202
+  _ctyp_tab
+                                  fff035a0       202   data ,l         1
+
+SECTION=C
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff037a4  fff037bb        18
+  __CTBL
+                                  fff037a4        18   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff037bc  fff037bf         4
+  __nfiles
+                                  fff037bc         4   data ,g         3
+FILE=.\r_cmt_rx\src\r_cmt_rx.obj
+                                  fff037c0  fff037df        20
+  _g_cmt_channels
+                                  fff037c0        10   data ,l         3
+  _g_cmt_clock_dividers
+                                  fff037d0        10   data ,l         1
+FILE=xfoprep
+                                  fff037e0  fff03827        48
+  _init$1
+                                  fff037e0        48   data ,l         1
+FILE=xprintf
+                                  fff03828  fff0383f        18
+  _fbit$2
+                                  fff03828        18   data ,l         1
+FILE=_sbrk_si
+                                  fff03840  fff03843         4
+  __sbrk_size
+                                  fff03840         4   data ,g         1
+FILE=xputfld
+                                  fff03844  fff03847         4
+  _vpsize$1
+                                  fff03844         4   data ,l         0
+FILE=xfopen
+                                  fff03848  fff03857        10
+  _rwacc$1
+                                  fff03848        10   data ,l         1
+FILE=xvacopy
+                                  fff03858  fff0385b         4
+  _vasize$1
+                                  fff03858         4   data ,l         0
+FILE=xldtob
+                                  fff0385c  fff038a3        48
+  _pows
+                                  fff0385c        48   data ,l         1
+FILE=xwctomb
+                                  fff038a4  fff038ab         8
+  _initial$1
+                                  fff038a4         8   data ,l         0
+
+SECTION=C$DSEC
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff038ac  fff038cf        24
+  __DTBL
+                                  fff038ac        24   data ,g         0
+
+SECTION=C$BSEC
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff038d0  fff038e7        18
+  __BTBL
+                                  fff038d0        18   data ,g         0
+
+SECTION=C$VECT
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  fff038e8  fff03ce7       400
+
+SECTION=D
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff03ce8  fff03cfb        14
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  fff03cfc  fff03cff         4
+FILE=.\r_glyph\src\glyph\fonts\bitmap_font.obj
+                                  fff03d00  fff040ff       400
+FILE=.\r_glyph\src\glyph\fonts\font_8x16.obj
+                                  fff04100  fff044ff       400
+FILE=.\r_glyph\src\glyph\fonts\font_8x8.obj
+                                  fff04500  fff048ff       400
+FILE=.\r_glyph\src\glyph\fonts\font_helvr10.obj
+                                  fff04900  fff04cff       400
+FILE=.\r_glyph\src\glyph\fonts\font_winfreesystem14x16.obj
+                                  fff04d00  fff050ff       400
+FILE=.\r_glyph\src\glyph\fonts\font_x5x7.obj
+                                  fff05100  fff054ff       400
+FILE=.\r_glyph\src\glyph\fonts\font_x6x13.obj
+                                  fff05500  fff058ff       400
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  fff05900  fff0591b        1c
+FILE=.\src\HC_06.obj
+                                  fff0591c  fff0591f         4
+FILE=xfiles
+                                  fff05920  fff059f7        d8
+FILE=malloc
+                                  fff059f8  fff059ff         8
+FILE=xprintf
+                                  fff05a00  fff05a03         4
+FILE=xctype
+                                  fff05a04  fff05a0b         8
+FILE=xstate
+                                  fff05a0c  fff05a53        48
+FILE=localeco
+                                  fff05a54  fff05aa7        54
+FILE=xwcstate
+                                  fff05aa8  fff05aeb        44
+FILE=xvalues
+                                  fff05aec  fff05b6b        80
+
+SECTION=D_1
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  fff05b6c  fff05b6e         3
+FILE=.\src\HC_06.obj
+                                  fff05b6f  fff05b78         a
+FILE=.\src\suart\suart.obj
+                                  fff05b79  fff05b7b         3
+FILE=xfiles
+                                  fff05b7c  fff05bcb        50
+FILE=xstate
+                                  fff05bcc  fff05bcc         1
+
+SECTION=W_1
+FILE=.\r_glyph\src\glyph\drivers\st7579_lcd.obj
+                                  fff05bd0  fff05be1        12
+
+SECTION=W_2
+FILE=.\r_gpio_rx\src\r_gpio_rx.obj
+                                  fff05be2  fff05bf3        12
+
+SECTION=L
+FILE=.\r_bsp\board\rdkrx63n\dbsct.obj
+                                  fff05bf4  fff05bf7         4
+  _deadSpace
+                                  fff05bf4         4   data ,g         0
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff05bf8  fff05c39        42
+FILE=.\r_glyph\src\glyph\drivers\st7579_lcd.obj
+                                  fff05c3c  fff05c45         a
+FILE=.\r_glyph\src\glyph\glyph.obj
+                                  fff05c48  fff05c79        32
+FILE=xprintf
+                                  fff05c7c  fff05c82         7
+FILE=xldtob
+                                  fff05c84  fff05ca5        22
+FILE=xgenld
+                                  fff05ca8  fff05ca9         2
+FILE=localeco
+                                  fff05cac  fff05cb8         d
+
+SECTION=P
+FILE=.\r_bsp\board\rdkrx63n\hwsetup.obj
+                                  fff05cb9  fff05e4e       196
+  _hardware_setup
+                                  fff05cb9         d   func ,g         1
+  _output_ports_configure
+                                  fff05cc6       187   func ,l         1
+  _interrupts_configure
+                                  fff05e4d         1   func ,l         1
+  _peripheral_modules_enable
+                                  fff05e4e         1   func ,l         1
+FILE=.\r_bsp\board\rdkrx63n\lowlvl.obj
+                                  fff05e4f  fff05e74        26
+  _charput
+                                  fff05e4f        13   func ,g         1
+  _charget
+                                  fff05e62        13   func ,g         1
+FILE=.\r_bsp\board\rdkrx63n\lowsrc.obj
+                                  fff05e75  fff05ff1       17d
+  __INIT_IOLIB
+                                  fff05e75        75   func ,g         1
+  __CLOSEALL
+                                  fff05eea        21   func ,g         1
+  _open
+                                  fff05f0b        67   func ,g         1
+  _close
+                                  fff05f72         3   func ,g         1
+  _write
+                                  fff05f75        3e   func ,g         1
+  _read
+                                  fff05fb3        3b   func ,g         0
+  _lseek
+                                  fff05fee         4   func ,g         0
+FILE=.\r_bsp\board\rdkrx63n\resetprg.obj
+                                  fff05ff2  fff060ea        f9
+  _PowerON_Reset_PC
+                                  fff05ff2        56   entry,g         1
+  _operating_frequency_set
+                                  fff06048        39   func ,l         1
+  _clock_source_select
+                                  fff06081        6a   func ,l         1
+FILE=.\r_bsp\board\rdkrx63n\sbrk.obj
+                                  fff060eb  fff0610b        21
+  _sbrk
+                                  fff060eb        21   func ,g         1
+FILE=.\r_bsp\board\rdkrx63n\vecttbl.obj
+                                  fff0610c  fff0620f       104
+  _excep_supervisor_inst_isr
+                                  fff0610c        18   func ,g         1
+  _excep_undefined_inst_isr
+                                  fff06124        18   func ,g         1
+  _excep_floating_point_isr
+                                  fff0613c        22   func ,g         1
+  _non_maskable_isr
+                                  fff0615e        7b   func ,g         1
+  _undefined_interrupt_source_isr
+                                  fff061d9        18   func ,g         7
+  _bus_error_isr
+                                  fff061f1        1f   func ,g         0
+FILE=.\r_bsp\mcu\all\r_bsp_common.obj
+                                  fff06210  fff062e5        d6
+  _R_BSP_GetVersion
+                                  fff06210         6   func ,g         0
+  _R_BSP_GetIClkFreqHz
+                                  fff06216         4   func ,g         1
+  _R_BSP_SoftwareDelay
+                                  fff0621a        cc   func ,g         0
+FILE=.\r_bsp\mcu\rx63n\cpu.obj
+                                  fff062e6  fff063ab        c6
+  _R_BSP_InterruptsDisable
+                                  fff062e6         3   func ,g         0
+  _R_BSP_InterruptsEnable
+                                  fff062e9         3   func ,g         0
+  _R_BSP_CpuInterruptLevelRead
+                                  fff062ec         9   func ,g         0
+  _R_BSP_CpuInterruptLevelWrite
+                                  fff062f5        1d   func ,g         0
+  _R_BSP_RegisterProtectEnable
+                                  fff06312        47   func ,g         3
+  _R_BSP_RegisterProtectDisable
+                                  fff06359        41   func ,g         3
+  _bsp_register_protect_open
+                                  fff0639a        12   func ,g         1
+FILE=.\r_bsp\mcu\rx63n\locking.obj
+                                  fff063ac  fff063e1        36
+  _R_BSP_SoftwareLock
+                                  fff063ac        14   func ,g         1
+  _R_BSP_SoftwareUnlock
+                                  fff063c0         6   func ,g         1
+  _R_BSP_HardwareLock
+                                  fff063c6         e   func ,g         2
+  _R_BSP_HardwareUnlock
+                                  fff063d4         e   func ,g         3
+FILE=.\r_bsp\mcu\rx63n\mcu_clocks.obj
+                                  fff063e2  fff0644b        6a
+  _get_iclk_freq_hz
+                                  fff063e2        6a   func ,g         1
+FILE=.\r_bsp\mcu\rx63n\mcu_init.obj
+                                  fff0644c  fff064e9        9e
+  _bsp_non_existent_port_init
+                                  fff0644c        9e   func ,g         1
+FILE=.\r_bsp\mcu\rx63n\mcu_interrupts.obj
+                                  fff064ea  fff065e1        f8
+  _bsp_interrupt_open
+                                  fff064ea        16   func ,g         1
+  _R_BSP_InterruptWrite
+                                  fff06500        1c   func ,g         0
+  _R_BSP_InterruptRead
+                                  fff0651c        1b   func ,g         0
+  _R_BSP_InterruptControl
+                                  fff06537        3f   func ,g         c
+  _bsp_interrupt_enable_disable
+                                  fff06576        6c   func ,g         2
+FILE=.\r_cmt_rx\src\r_cmt_rx.obj
+                                  fff065e2  fff06a72       491
+  _R_CMT_CreatePeriodic
+                                  fff065e2         7   func ,g         1
+  _R_CMT_CreateOneShot
+                                  fff065e9        11   func ,g         0
+  _R_CMT_Stop
+                                  fff065fa        2e   func ,g         1
+  _R_CMT_Control
+                                  fff06628        d1   func ,g         0
+  _cmt_create
+                                  fff066f9        5d   func ,l         2
+  _cmt_lock_state
+                                  fff06756         6   func ,l         1
+  _cmt_unlock_state
+                                  fff0675c         6   func ,l         1
+  _cmt_find_channel
+                                  fff06762        22   func ,l         1
+  _power_on
+                                  fff06784        71   func ,l         1
+  _power_off
+                                  fff067f5        8b   func ,l         1
+  _cmt_counter_start
+                                  fff06880        a4   func ,l         1
+  _cmt_counter_stop
+                                  fff06924        83   func ,l         1
+  _cmt_setup_channel
+                                  fff069a7        5b   func ,l         1
+  _R_CMT_GetVersion
+                                  fff06a02         6   func ,g         0
+  _cmt_isr_common
+                                  fff06a08        2f   func ,l         4
+  _cmt0_isr
+                                  fff06a37         f   func ,l         0
+  _cmt1_isr
+                                  fff06a46         f   func ,l         0
+  _cmt2_isr
+                                  fff06a55         f   func ,l         0
+  _cmt3_isr
+                                  fff06a64         f   func ,l         0
+FILE=.\r_glyph\lcd.obj
+                                  fff06a73  fff06b09        97
+  _lcd_initialize
+                                  fff06a73        35   func ,g         1
+  _lcd_clear
+                                  fff06aa8         c   func ,g         1
+  _lcd_display
+                                  fff06ab4        56   func ,g         1
+FILE=.\r_glyph\src\glyph\drivers\st7579_lcd.obj
+                                  fff06b0a  fff0716a       661
+  _ST7579_Open
+                                  fff06b0a        4b   func ,g         1
+  _ST7579_Close
+                                  fff06b55         3   func ,g         1
+  _ST7579_Write
+                                  fff06b58       2f4   func ,g         1
+  _ST7579_Read
+                                  fff06e4c        bb   func ,g         1
+  _ST7579_SetSystemBiasBooster
+                                  fff06f07        a2   func ,g         2
+  _ST7579_SetVO_Range
+                                  fff06fa9        53   func ,g         2
+  _ST7579_Config
+                                  fff06ffc        38   func ,g         1
+  _ST7579_Send16bitsCommand
+                                  fff07034        1c   func ,g         1
+  _ST7579_Send8bitsData
+                                  fff07050         9   func ,g         0
+  _ST7579_SetFrameRate
+                                  fff07059        81   func ,g         2
+  _ST7579_SetPage
+                                  fff070da        23   func ,g         9
+  _ST7579_SetChar
+                                  fff070fd        21   func ,g         9
+  _ST7579_SetLine
+                                  fff0711e        4d   func ,g         2
+FILE=.\r_glyph\src\glyph\glyph.obj
+                                  fff0716b  fff07442       2d8
+  _GlyphOpen
+                                  fff0716b        4a   func ,g         1
+  _GlyphClose
+                                  fff071b5        39   func ,g         0
+  _GlyphWrite
+                                  fff071ee         7   func ,g         0
+  _GlyphRead
+                                  fff071f5         7   func ,g         0
+  _GlyphGetStatus
+                                  fff071fc         b   func ,g         0
+  _GlyphSetX
+                                  fff07207         b   func ,g         0
+  _GlyphSetY
+                                  fff07212         b   func ,g         0
+  _GlyphSetXY
+                                  fff0721d        25   func ,g         1
+  _GlyphGetXY
+                                  fff07242        25   func ,g         0
+  _GlyphSetFont
+                                  fff07267         b   func ,g         1
+  _GlyphGetFont
+                                  fff07272         b   func ,g         0
+  _GlyphSetDrawMode
+                                  fff0727d         b   func ,g         8
+  _GlyphChar
+                                  fff07288         b   func ,g         1
+  _GlyphString
+                                  fff07293        1e   func ,g         1
+  _GlyphGetVersionInfo
+                                  fff072b1        ae   func ,g         0
+  _GlyphClearScreen
+                                  fff0735f         5   func ,g         3
+  _GlyphInvertScreen
+                                  fff07364         5   func ,g         0
+  _GlyphNormalScreen
+                                  fff07369         5   func ,g         1
+  _GlyphSleep
+                                  fff0736e         5   func ,g         0
+  _GlyphWake
+                                  fff07373         5   func ,g         0
+  _GlyphDrawTestPattern
+                                  fff07378         5   func ,g         0
+  _GlyphDrawBlock
+                                  fff0737d        57   func ,g         0
+  _GlyphEraseBlock
+                                  fff073d4        57   func ,g         1
+  _GlyphSetContrast
+                                  fff0742b         c   func ,g         0
+  _GlyphSetContrastBoost
+                                  fff07437         c   func ,g         0
+FILE=.\r_glyph\src\r_glyph.obj
+                                  fff07443  fff074dd        9b
+  _R_GLYPH_Open
+                                  fff07443        3e   func ,g         1
+  _R_GLYPH_CommandSend
+                                  fff07481         8   func ,g         1
+  _R_GLYPH_DataSend
+                                  fff07489         9   func ,g         1
+  _glyph_send_byte
+                                  fff07492        4c   func ,g         2
+FILE=.\r_glyph\src\r_glyph_register.obj
+                                  fff074de  fff0753b        5e
+  _GlyphCommOpen
+                                  fff074de        2c   func ,g         1
+  _GlyphLCDOpen
+                                  fff0750a        32   func ,g         1
+FILE=.\r_gpio_rx\src\r_gpio_rx.obj
+                                  fff0753c  fff07742       207
+  _R_GPIO_PortWrite
+                                  fff0753c         d   func ,g         0
+  _R_GPIO_PortRead
+                                  fff07549         d   func ,g         0
+  _R_GPIO_PortDirectionSet
+                                  fff07556        25   func ,g         0
+  _R_GPIO_PinWrite
+                                  fff0757b        2c   func ,g         2
+  _R_GPIO_PinRead
+                                  fff075a7        16   func ,g         3
+  _R_GPIO_PinDirectionSet
+                                  fff075bd        2c   func ,g         2
+  _R_GPIO_PinControl
+                                  fff075e9       117   func ,g         0
+  _R_GPIO_GetVersion
+                                  fff07700         6   func ,g         0
+  _gpio_port_addr_get
+                                  fff07706         5   func ,g         0
+  _gpio_pin_function_check
+                                  fff0770b         a   func ,g         0
+  _gpio_set_output_type
+                                  fff07715        2e   func ,g         2
+FILE=.\r_rspi_rx600\src\r_rspi_rx600.obj
+                                  fff07743  fff07bb4       472
+  _R_RSPI_Init
+                                  fff07743       1d9   func ,g         2
+  _R_RSPI_Select
+                                  fff0791c        4a   func ,g         1
+  _R_RSPI_Deselect
+                                  fff07966        4a   func ,g         1
+  _R_RSPI_BaudRateSet
+                                  fff079b0        26   func ,g         0
+  _R_RSPI_SendReceive
+                                  fff079d6        94   func ,g         0
+  _R_RSPI_Read
+                                  fff07a6a        77   func ,g         0
+  _R_RSPI_Write
+                                  fff07ae1        77   func ,g         1
+  _R_RSPI_Lock
+                                  fff07b58        37   func ,g         1
+  _R_RSPI_Unlock
+                                  fff07b8f        17   func ,g         1
+  _R_RSPI_CheckLock
+                                  fff07ba6         f   func ,g         6
+FILE=.\src\HC_06.obj
+                                  fff07bb5  fff07c2b        77
+  _rx_cback
+                                  fff07bb5        51   func ,g         1
+  _main
+                                  fff07c06        26   func ,g         1
+FILE=.\src\suart\suart.obj
+                                  fff07c2c  fff07f0e       2e3
+  _suart_tx_poll
+                                  fff07c2c        a0   func ,g         1
+  _suart_rx_poll
+                                  fff07ccc        c5   func ,g         1
+  _suart_tx
+                                  fff07d91        25   func ,g         3
+  _suart_tx_sync
+                                  fff07db6        25   func ,g         1
+  _suart_tx_buff
+                                  fff07ddb        26   func ,g         0
+  _suart_tx_buff_sync
+                                  fff07e01        26   func ,g         0
+  _suart_timer_cback
+                                  fff07e27        2b   func ,g         1
+  _suart_init_all_channels
+                                  fff07e52        4d   func ,g         1
+  _suart_init
+                                  fff07e9f        70   func ,g         1
+FILE=freopen
+                                  fff07f0f  fff07f3d        2f
+  _freopen
+                                  fff07f0f        2f   func ,g         3
+FILE=fclose
+                                  fff07f3e  fff07f91        54
+  _fclose
+                                  fff07f3e        54   func ,g         4
+FILE=sprintf
+                                  fff07f92  fff07fc8        37
+  _prout
+                                  fff07f92         b   func ,l         1
+  _sprintf
+                                  fff07f9d        2c   func ,g         2
+FILE=__COM_DIV64u
+                                  fff07fc9  fff08061        99
+  __COM_DIV64u
+                                  fff07fc9         0   none ,g         4
+  _Loop_Init
+                                  fff07fd3         0   none ,l         2
+  _Loop
+                                  fff07fdb         0   none ,l         1
+  _DivStart
+                                  fff07fe7         0   none ,l         3
+  _Success
+                                  fff07ff5         0   none ,l         1
+  _DivEnd
+                                  fff08001         0   none ,l         0
+  IXI6DIV
+                                  fff08006         0   none ,l         1
+  IXI4DIV
+                                  fff08018         0   none ,l         1
+  IXI2DIV
+                                  fff08028         0   none ,l         1
+  I8I2DIV
+                                  fff08030         0   none ,l         1
+  I4I2DIV
+                                  fff0805e         0   none ,l         1
+  _i8divU_End
+                                  fff08061         0   none ,l         0
+FILE=__initsct
+                                  fff08062  fff080ab        4a
+  __INITSCT
+                                  fff08062         0   none ,g         1
+  loop1
+                                  fff08074         0   none ,l         1
+  next_loop1
+                                  fff08082         0   none ,l         2
+  loop3
+                                  fff08094         0   none ,l         1
+  next_loop3
+                                  fff080a5         0   none ,l         2
+FILE=free
+                                  fff080ac  fff0812e        83
+  _free
+                                  fff080ac        83   func ,g         7
+FILE=malloc
+                                  fff0812f  fff0820c        de
+  _findmem
+                                  fff0812f        7b   func ,l         1
+  _malloc
+                                  fff081aa        63   func ,g         5
+FILE=fflush
+                                  fff0820d  fff08294        88
+  _fflush
+                                  fff0820d        88   func ,g         2
+FILE=xfoprep
+                                  fff08295  fff08373        df
+  __Foprep
+                                  fff08295        df   func ,g         1
+FILE=xfofind
+                                  fff08374  fff08401        8e
+  __Fofind
+                                  fff08374        45   func ,g         0
+  __Fofree
+                                  fff083b9        49   func ,g         2
+FILE=xprintf
+                                  fff08402  fff08678       277
+  __Printf
+                                  fff08402       277   func ,g         1
+FILE=xgetmem
+                                  fff08679  fff08690        18
+  __Getmem
+                                  fff08679        18   func ,g         1
+FILE=xputfld
+                                  fff08691  fff08b21       491
+  __Putfld
+                                  fff08691       491   func ,g         1
+FILE=xfopen
+                                  fff08b22  fff08b51        30
+  __Fopen
+                                  fff08b22        30   func ,g         1
+FILE=xvacopy
+                                  fff08b52  fff08b59         8
+  __Vacopy
+                                  fff08b52         8   func ,g         2
+FILE=xputtxt
+                                  fff08b5a  fff08e3c       2e3
+  __Puttxt
+                                  fff08b5a       2e3   func ,g         3
+FILE=strchr
+                                  fff08e3d  fff08e53        17
+  _strchr
+                                  fff08e3d        17   func ,g         2
+FILE=xctype
+                                  fff08e54  fff08e69        16
+  __Getpctype
+                                  fff08e54        16   func ,g         0
+FILE=xldtob
+                                  fff08e6a  fff09356       4ed
+  __Ldtob
+                                  fff08e6a       4ed   func ,g         1
+FILE=xputstr
+                                  fff09357  fff09434        de
+  __Putstr
+                                  fff09357        de   func ,g         1
+FILE=xlitob
+                                  fff09435  fff09553       11f
+  __Litob
+                                  fff09435       11f   func ,g         1
+FILE=xgenld
+                                  fff09554  fff09809       2b6
+  __Genld
+                                  fff09554       2b6   func ,g         1
+FILE=xwctomb
+                                  fff0980a  fff0996d       164
+  __Wctombx
+                                  fff0980a       11d   func ,g         1
+  __Wctomb
+                                  fff09927        47   func ,g         1
+FILE=xstate
+                                  fff0996e  fff0999f        32
+  __Getmbcurmax
+                                  fff0996e        16   func ,g         2
+  __Getpmbstate
+                                  fff09984        1c   func ,g         0
+FILE=xldscale
+                                  fff099a0  fff099a3         4
+  __LDscale
+                                  fff099a0         4   func ,g         1
+FILE=xldunsca
+                                  fff099a4  fff099a7         4
+  __LDunscale
+                                  fff099a4         4   func ,g         1
+FILE=__COM_DIVd
+                                  fff099a8  fff09b84       1dd
+  exception1
+                                  fff099a8         0   none ,l         1
+  exception2
+                                  fff099b7         0   none ,l         1
+  exception3
+                                  fff099bf         0   none ,l         1
+  normalize1
+                                  fff099d2         0   none ,l         1
+  p1_norm_loop
+                                  fff099dd         0   none ,l         1
+  exception4
+                                  fff09a13         0   none ,l         1
+  normalize2
+                                  fff09a19         0   none ,l         0
+  p2_norm_loop
+                                  fff09a24         0   none ,l         1
+  return_zero
+                                  fff09a51         0   none ,l         4
+  return_inf
+                                  fff09a5c         0   none ,l         3
+  return_NaN
+                                  fff09a6f         0   none ,l         4
+  __COM_DIVd
+                                  fff09a7a         0   none ,g         1
+  exception_return3
+                                  fff09aae         0   none ,l         5
+  exception_return4
+                                  fff09ab3         0   none ,l         5
+  div_loop
+                                  fff09ad4         0   none ,l         2
+  man_sub
+                                  fff09ae7         0   none ,l         1
+  over_sub
+                                  fff09af2         0   none ,l         1
+  end_man_cal
+                                  fff09afa         0   none ,l         1
+  end_sticky_cal
+                                  fff09aff         0   none ,l         1
+  end_norm
+                                  fff09b0d         0   none ,l         1
+  denormalize_loop
+                                  fff09b1a         0   none ,l         1
+  next_loop
+                                  fff09b22         0   none ,l         1
+  round_denormal
+                                  fff09b2a         0   none ,l         1
+  end_round_d
+                                  fff09b44         0   none ,l         4
+  end_denormal
+                                  fff09b46         0   none ,l         1
+  end_denormal_0
+                                  fff09b56         0   none ,l         1
+  return_value
+                                  fff09b64         0   none ,l         1
+  end_round
+                                  fff09b64         0   none ,l         3
+  return
+                                  fff09b7e         0   none ,l         0
+FILE=__COM_MOD64u
+                                  fff09b85  fff09c0b        87
+  __COM_MOD64u
+                                  fff09b85         0   none ,g         1
+  _Loop_Init
+                                  fff09b8f         0   none ,l         2
+  _Loop
+                                  fff09b93         0   none ,l         1
+  _DivStart
+                                  fff09b9f         0   none ,l         3
+  _Success
+                                  fff09bad         0   none ,l         1
+  _DivEnd
+                                  fff09bb5         0   none ,l         0
+  IXI6DIV
+                                  fff09bb6         0   none ,l         1
+  IXI4DIV
+                                  fff09bc8         0   none ,l         1
+  IXI2DIV
+                                  fff09bd8         0   none ,l         1
+  I8I2DIV
+                                  fff09be0         0   none ,l         1
+  I4I2DIV
+                                  fff09c00         0   none ,l         1
+FILE=_div
+                                  fff09c0c  fff09c17         c
+  _ldiv
+                                  fff09c0c         0   none ,g         1
+  _div
+                                  fff09c0c         0   none ,g         1
+FILE=__COM_ADDd_SUBd
+                                  fff09c18  fff09e8c       275
+  __COM_SUBd
+                                  fff09c18         0   none ,g         2
+  __COM_ADDd
+                                  fff09c1f         0   none ,g         0
+  non_swap
+                                  fff09c40         0   none ,l         1
+  swap
+                                  fff09c43         0   none ,l         2
+  swap_end
+                                  fff09c49         0   none ,l         1
+  x_normal
+                                  fff09c6c         0   none ,l         1
+  shift_more_than_32
+                                  fff09cb1         0   none ,l         1
+  set_sticky
+                                  fff09cd2         0   none ,l         1
+  after_shift
+                                  fff09cd9         0   none ,l         2
+  round1
+                                  fff09cf0         0   none ,l         6
+  round_end
+                                  fff09d07         0   none ,l         2
+  return
+                                  fff09d20         0   none ,l         2
+  return_x_asis
+                                  fff09d23         0   none ,l         1
+  pack
+                                  fff09d30         0   none ,l         6
+  inf_or_nan
+                                  fff09d3d         0   none ,l         1
+  return_nan
+                                  fff09d4f         0   none ,l         1
+  zero_or_den
+                                  fff09d5a         0   none ,l         1
+  add_ovf
+                                  fff09d76         0   none ,l         1
+  subtract
+                                  fff09d96         0   none ,l         1
+  sub_underflow
+                                  fff09dab         0   none ,l         2
+  normalize1
+                                  fff09dbe         0   none ,l         1
+  normalize2
+                                  fff09dd2         0   none ,l         1
+  normalize3
+                                  fff09de6         0   none ,l         1
+  normalize4
+                                  fff09df9         0   none ,l         1
+  normalize5
+                                  fff09e07         0   none ,l         1
+  den_shift_more_than_32
+                                  fff09e2f         0   none ,l         1
+  shift_end
+                                  fff09e3f         0   none ,l         1
+  sub_underflow1
+                                  fff09e44         0   none ,l         1
+  denormal
+                                  fff09e5d         0   none ,l         1
+  x_normal_preparation
+                                  fff09e74         0   none ,l         1
+  den_add
+                                  fff09e7b         0   none ,l         1
+FILE=__COM_CMPGTd
+                                  fff09e8d  fff09f00        74
+  __COM_CMPGTd
+                                  fff09e8d         0   none ,g         2
+  exception_return1
+                                  fff09ead         0   none ,l         1
+  exception_return2
+                                  fff09eb1         0   none ,l         1
+  exception_return3
+                                  fff09eb5         0   none ,l         3
+  minus
+                                  fff09ecb         0   none ,l         1
+  sign_def
+                                  fff09ed6         0   none ,l         1
+  exception1
+                                  fff09ede         0   none ,l         1
+  exception2
+                                  fff09ee7         0   none ,l         1
+  exception3
+                                  fff09ef0         0   none ,l         1
+FILE=__COM_CMPLEd
+                                  fff09f01  fff09f78        78
+  __COM_CMPLEd
+                                  fff09f01         0   none ,g         3
+  exception_return1
+                                  fff09f21         0   none ,l         1
+  exception_return2
+                                  fff09f25         0   none ,l         1
+  exception_return3
+                                  fff09f29         0   none ,l         3
+  minus
+                                  fff09f40         0   none ,l         1
+  sign_def
+                                  fff09f4e         0   none ,l         1
+  return
+                                  fff09f53         0   none ,l         0
+  exception1
+                                  fff09f56         0   none ,l         1
+  exception2
+                                  fff09f5f         0   none ,l         1
+  exception3
+                                  fff09f68         0   none ,l         1
+FILE=__COM_CONV32sd
+                                  fff09f79  fff09fd6        5e
+  __COM_CONV32sd
+                                  fff09f79         0   none ,g         2
+  exponent_set
+                                  fff09f86         0   none ,l         1
+  count_upper_24
+                                  fff09f9c         0   none ,l         1
+  count_upper_28
+                                  fff09fa4         0   none ,l         1
+  count_upper_30
+                                  fff09fac         0   none ,l         1
+  result
+                                  fff09fb4         0   none ,l         1
+  nlz_count_exit
+                                  fff09fbe         0   none ,l         1
+  round1
+                                  fff09fc3         0   none ,l         1
+  pack
+                                  fff09fc5         0   none ,l         0
+  return
+                                  fff09fd3         0   none ,l         0
+  return_zero
+                                  fff09fd4         0   none ,l         1
+FILE=__COM_CONVd32
+                                  fff09fd7  fff0a05e        88
+  __COM_CONVd32u
+                                  fff09fd7         0   none ,g         0
+  __COM_CONVd32s
+                                  fff09fda         0   none ,g         2
+  unpack
+                                  fff09fdd         0   none ,l         1
+  r_shift
+                                  fff0a02a         0   none ,l         1
+  end_shift
+                                  fff0a02f         0   none ,l         1
+  return
+                                  fff0a037         0   none ,l         4
+  return_zero
+                                  fff0a038         0   none ,l         1
+  return_max_min
+                                  fff0a03b         0   none ,l         1
+  return_unsigned
+                                  fff0a051         0   none ,l         2
+FILE=__COM_MULd
+                                  fff0a05f  fff0a24f       1f1
+  __COM_MULd
+                                  fff0a05f         0   none ,g         3
+  non_swap
+                                  fff0a07c         0   none ,l         1
+  swap
+                                  fff0a07d         0   none ,l         2
+  swap_end
+                                  fff0a083         0   none ,l         1
+  x_normal
+                                  fff0a0a6         0   none ,l         1
+  after_mul_ovf_adjust
+                                  fff0a120         0   none ,l         1
+  round1
+                                  fff0a12d         0   none ,l         1
+  round_end
+                                  fff0a13b         0   none ,l         2
+  return
+                                  fff0a154         0   none ,l         0
+  reflect_sign
+                                  fff0a157         0   none ,l         0
+  inf_or_nan
+                                  fff0a160         0   none ,l         1
+  return_inf
+                                  fff0a16a         0   none ,l         1
+  return_nan
+                                  fff0a178         0   none ,l         2
+  zero_or_den
+                                  fff0a183         0   none ,l         1
+  return_zero
+                                  fff0a189         0   none ,l         2
+  denormal
+                                  fff0a194         0   none ,l         1
+  normalize2
+                                  fff0a1ac         0   none ,l         2
+  normalize3
+                                  fff0a1be         0   none ,l         1
+  normalize4
+                                  fff0a1d1         0   none ,l         1
+  normalize5
+                                  fff0a1e5         0   none ,l         1
+  normalize6
+                                  fff0a1f8         0   none ,l         1
+  normalize7
+                                  fff0a206         0   none ,l         1
+  return_denormal
+                                  fff0a209         0   none ,l         1
+  after_shift_32
+                                  fff0a227         0   none ,l         1
+FILE=localeco
+                                  fff0a250  fff0a256         7
+  _localeconv
+                                  fff0a250         7   func ,g         1
+FILE=xwcstate
+                                  fff0a257  fff0a272        1c
+  __Getpwcstate
+                                  fff0a257        1c   func ,g         0
+FILE=xdscale
+                                  fff0a273  fff0a40e       19c
+  __Dscale
+                                  fff0a273       19c   func ,g         1
+FILE=xdunscal
+                                  fff0a40f  fff0a478        6a
+  __Dunscale
+                                  fff0a40f        6a   func ,g         1
+FILE=xdnorm
+                                  fff0a479  fff0a542        ca
+  __Dnorm
+                                  fff0a479        ca   func ,g         2
+
+SECTION=FIXEDVECT
+FILE=.\r_bsp\board\rdkrx63n\vecttbl.obj
+                                  ffffff80  ffffffff        80
+  _Fixed_Vectors
+                                  ffffff80        80   data ,g         0
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
