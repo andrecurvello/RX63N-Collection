@@ -1,4 +1,6 @@
-src/rtos_launcher.obj src/rtos_launcher.d: ../src/rtos_launcher.c \
+r_gpio_rx/src/targets/rx63n/r_gpio_rx63n.obj \
+ r_gpio_rx/src/targets/rx63n/r_gpio_rx63n.d: \
+ ../r_gpio_rx/src/targets/rx63n/r_gpio_rx63n.c \
  C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/platform.h \
  C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/./board/rdkrx63n/r_bsp.h \
  C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/mcu/all/r_bsp_common.h \
@@ -24,21 +26,9 @@ src/rtos_launcher.obj src/rtos_launcher.d: ../src/rtos_launcher.c \
  C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/board/rdkrx63n/hwsetup.h \
  C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/board/rdkrx63n/lowsrc.h \
  C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/board/rdkrx63n/vecttbl.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium/rtos_inc.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-CPU/cpu_core.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-CPU\RX\RXC/cpu.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-CPU/cpu_def.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source\config/cpu_cfg.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-LIB/lib_def.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-LIB/lib_mem.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source\config/lib_cfg.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-LIB/lib_str.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-LIB/lib_ascii.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source/os.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source\config/os_cfg.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source/os_type.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Ports\Renesas\RX\RXC/os_cpu.h \
- C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\BSP/bsp.h
+ C:\Users\Miguel\e2_studio\workspace\RTOS1\r_gpio_rx/r_gpio_rx_if.h \
+ C:\Users\Miguel\e2_studio\workspace\RTOS1\r_config/r_gpio_rx_config.h \
+ C:\Users\Miguel\e2_studio\workspace\RTOS1\r_gpio_rx/./src/targets/rx63n/r_gpio_rx63n.h
 
 C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/platform.h:
 
@@ -90,32 +80,8 @@ C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/board/rdkrx63n/lowsrc.h:
 
 C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/board/rdkrx63n/vecttbl.h:
 
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium/rtos_inc.h:
+C:\Users\Miguel\e2_studio\workspace\RTOS1\r_gpio_rx/r_gpio_rx_if.h:
 
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-CPU/cpu_core.h:
+C:\Users\Miguel\e2_studio\workspace\RTOS1\r_config/r_gpio_rx_config.h:
 
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-CPU\RX\RXC/cpu.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-CPU/cpu_def.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source\config/cpu_cfg.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-LIB/lib_def.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-LIB/lib_mem.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source\config/lib_cfg.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-LIB/lib_str.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uC-LIB/lib_ascii.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source/os.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source\config/os_cfg.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Source/os_type.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Ports\Renesas\RX\RXC/os_cpu.h:
-
-C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\BSP/bsp.h:
+C:\Users\Miguel\e2_studio\workspace\RTOS1\r_gpio_rx/./src/targets/rx63n/r_gpio_rx63n.h:

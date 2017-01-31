@@ -9,6 +9,7 @@ RM := rm -rf *.sni *.dbg *.lst *.lis *.lpp *.map *.x *.lbp src/*.src src/*.p src
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include micrium/BSP/subdir.mk
+-include micrium/subdir.mk
 -include micrium/uC-CPU/subdir.mk
 -include micrium/uC-LIB/subdir.mk
 -include micrium/uCOS-III/Ports/Renesas/RX/RXC/subdir.mk
@@ -16,7 +17,11 @@ RM := rm -rf *.sni *.dbg *.lst *.lis *.lpp *.map *.x *.lbp src/*.src src/*.p src
 -include r_bsp/board/rdkrx63n/subdir.mk
 -include r_bsp/mcu/all/subdir.mk
 -include r_bsp/mcu/rx63n/subdir.mk
+-include r_cmt_rx/src/subdir.mk
+-include r_gpio_rx/src/subdir.mk
+-include r_gpio_rx/src/targets/rx63n/subdir.mk
 -include src/subdir.mk
+-include src/suart/subdir.mk
 
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(CC_UPPER_DEPS)),)
@@ -254,6 +259,7 @@ ifneq ($(strip $(ASM_UPPER_DEPS)),)
 endif
 	-$(RM) $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS) $(CONVERTOR_OUTPUT_OUTPUTS) 
 	-rm -rf "micrium/BSP"/*.obj "micrium/BSP"/*.d "micrium/BSP"/*.src "micrium/BSP"/*.p "micrium/BSP"/*.pp "micrium/BSP"/*.mrc "micrium/BSP"/*.prn "micrium/BSP"/*.asm "micrium/BSP"/*.lst
+	-rm -rf "micrium"/*.obj "micrium"/*.d "micrium"/*.src "micrium"/*.p "micrium"/*.pp "micrium"/*.mrc "micrium"/*.prn "micrium"/*.asm "micrium"/*.lst
 	-rm -rf "micrium/uC-CPU"/*.obj "micrium/uC-CPU"/*.d "micrium/uC-CPU"/*.src "micrium/uC-CPU"/*.p "micrium/uC-CPU"/*.pp "micrium/uC-CPU"/*.mrc "micrium/uC-CPU"/*.prn "micrium/uC-CPU"/*.asm "micrium/uC-CPU"/*.lst
 	-rm -rf "micrium/uC-LIB"/*.obj "micrium/uC-LIB"/*.d "micrium/uC-LIB"/*.src "micrium/uC-LIB"/*.p "micrium/uC-LIB"/*.pp "micrium/uC-LIB"/*.mrc "micrium/uC-LIB"/*.prn "micrium/uC-LIB"/*.asm "micrium/uC-LIB"/*.lst
 	-rm -rf "micrium/uCOS-III/Ports/Renesas/RX/RXC"/*.obj "micrium/uCOS-III/Ports/Renesas/RX/RXC"/*.d "micrium/uCOS-III/Ports/Renesas/RX/RXC"/*.src "micrium/uCOS-III/Ports/Renesas/RX/RXC"/*.p "micrium/uCOS-III/Ports/Renesas/RX/RXC"/*.pp "micrium/uCOS-III/Ports/Renesas/RX/RXC"/*.mrc "micrium/uCOS-III/Ports/Renesas/RX/RXC"/*.prn "micrium/uCOS-III/Ports/Renesas/RX/RXC"/*.asm "micrium/uCOS-III/Ports/Renesas/RX/RXC"/*.lst
@@ -261,7 +267,11 @@ endif
 	-rm -rf "r_bsp/board/rdkrx63n"/*.obj "r_bsp/board/rdkrx63n"/*.d "r_bsp/board/rdkrx63n"/*.src "r_bsp/board/rdkrx63n"/*.p "r_bsp/board/rdkrx63n"/*.pp "r_bsp/board/rdkrx63n"/*.mrc "r_bsp/board/rdkrx63n"/*.prn "r_bsp/board/rdkrx63n"/*.asm "r_bsp/board/rdkrx63n"/*.lst
 	-rm -rf "r_bsp/mcu/all"/*.obj "r_bsp/mcu/all"/*.d "r_bsp/mcu/all"/*.src "r_bsp/mcu/all"/*.p "r_bsp/mcu/all"/*.pp "r_bsp/mcu/all"/*.mrc "r_bsp/mcu/all"/*.prn "r_bsp/mcu/all"/*.asm "r_bsp/mcu/all"/*.lst
 	-rm -rf "r_bsp/mcu/rx63n"/*.obj "r_bsp/mcu/rx63n"/*.d "r_bsp/mcu/rx63n"/*.src "r_bsp/mcu/rx63n"/*.p "r_bsp/mcu/rx63n"/*.pp "r_bsp/mcu/rx63n"/*.mrc "r_bsp/mcu/rx63n"/*.prn "r_bsp/mcu/rx63n"/*.asm "r_bsp/mcu/rx63n"/*.lst
+	-rm -rf "r_cmt_rx/src"/*.obj "r_cmt_rx/src"/*.d "r_cmt_rx/src"/*.src "r_cmt_rx/src"/*.p "r_cmt_rx/src"/*.pp "r_cmt_rx/src"/*.mrc "r_cmt_rx/src"/*.prn "r_cmt_rx/src"/*.asm "r_cmt_rx/src"/*.lst
+	-rm -rf "r_gpio_rx/src"/*.obj "r_gpio_rx/src"/*.d "r_gpio_rx/src"/*.src "r_gpio_rx/src"/*.p "r_gpio_rx/src"/*.pp "r_gpio_rx/src"/*.mrc "r_gpio_rx/src"/*.prn "r_gpio_rx/src"/*.asm "r_gpio_rx/src"/*.lst
+	-rm -rf "r_gpio_rx/src/targets/rx63n"/*.obj "r_gpio_rx/src/targets/rx63n"/*.d "r_gpio_rx/src/targets/rx63n"/*.src "r_gpio_rx/src/targets/rx63n"/*.p "r_gpio_rx/src/targets/rx63n"/*.pp "r_gpio_rx/src/targets/rx63n"/*.mrc "r_gpio_rx/src/targets/rx63n"/*.prn "r_gpio_rx/src/targets/rx63n"/*.asm "r_gpio_rx/src/targets/rx63n"/*.lst
 	-rm -rf "src"/*.obj "src"/*.d "src"/*.src "src"/*.p "src"/*.pp "src"/*.mrc "src"/*.prn "src"/*.asm "src"/*.lst
+	-rm -rf "src/suart"/*.obj "src/suart"/*.d "src/suart"/*.src "src/suart"/*.p "src/suart"/*.pp "src/suart"/*.mrc "src/suart"/*.prn "src/suart"/*.asm "src/suart"/*.lst
 	@echo.
 	@echo 'Clean complete.'
 

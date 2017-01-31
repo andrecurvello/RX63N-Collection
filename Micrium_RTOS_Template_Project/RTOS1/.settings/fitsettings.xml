@@ -4,6 +4,16 @@
         <name>r_bsp</name>
         <version>3.40</version>
     </selectedModules>
+    <selectedModules>
+        <name>r_cmt_rx</name>
+        <version>3.00</version>
+    </selectedModules>
+    <selectedModules>
+        <name>r_gpio_rx</name>
+        <version>2.10</version>
+    </selectedModules>
     <installedModules>r_bsp:3.40</installedModules>
+    <installedModules>r_cmt_rx:3.00</installedModules>
+    <installedModules>r_gpio_rx:2.10</installedModules>
     <fitProject>true</fitProject>
 </FITMODULE>

@@ -40,7 +40,11 @@ src/main.obj src/main.d: ../src/main.c \
  C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\uCOS-III\Ports\Renesas\RX\RXC/os_cpu.h \
  C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\BSP/bsp.h \
  C:\Renesas\E2_STU~1\Tools\Renesas\RX\2_0_0/include/stdio.h \
- C:\Renesas\E2_STU~1\Tools\Renesas\RX\2_0_0/include/stdlib.h
+ C:\Renesas\E2_STU~1\Tools\Renesas\RX\2_0_0/include/stdlib.h \
+ ../src/suart/suart.h \
+ C:\Users\Miguel\e2_studio\workspace\RTOS1\r_gpio_rx/r_gpio_rx_if.h \
+ C:\Users\Miguel\e2_studio\workspace\RTOS1\r_config/r_gpio_rx_config.h \
+ C:\Users\Miguel\e2_studio\workspace\RTOS1\r_gpio_rx/./src/targets/rx63n/r_gpio_rx63n.h
 
 C:\Users\Miguel\e2_studio\workspace\RTOS1\r_bsp/platform.h:
 
@@ -125,3 +129,11 @@ C:\Users\Miguel\e2_studio\workspace\RTOS1\micrium\BSP/bsp.h:
 C:\Renesas\E2_STU~1\Tools\Renesas\RX\2_0_0/include/stdio.h:
 
 C:\Renesas\E2_STU~1\Tools\Renesas\RX\2_0_0/include/stdlib.h:
+
+../src/suart/suart.h:
+
+C:\Users\Miguel\e2_studio\workspace\RTOS1\r_gpio_rx/r_gpio_rx_if.h:
+
+C:\Users\Miguel\e2_studio\workspace\RTOS1\r_config/r_gpio_rx_config.h:
+
+C:\Users\Miguel\e2_studio\workspace\RTOS1\r_gpio_rx/./src/targets/rx63n/r_gpio_rx63n.h:

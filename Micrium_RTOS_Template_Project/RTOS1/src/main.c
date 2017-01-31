@@ -42,17 +42,8 @@ void spawn_process(char * proc_name, OS_TASK_PTR task_ptr) {
 
 void thread1(void * args);
 
-OS_TMR tmr;
-
-int i = 0;
-void cback(void * args) {
-	printf("\nCBACK %d", i++);
-}
-
 void kmain(void * args) {
 	OS_ERR err;
-	OSTmrCreate(&tmr, (CPU_CHAR*)"T1", 1, 1000, OS_OPT_TMR_PERIODIC, (OS_TMR_CALLBACK_PTR)cback, 0, &err);
-	OSTmrStart(&tmr, &err);
 
 	spawn_process("Thread 1", thread1);
 	spawn_process("Thread 1 copy", thread1);

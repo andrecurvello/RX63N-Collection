@@ -59,6 +59,7 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 micrium/BSP \
+micrium \
 micrium/uC-CPU \
 micrium/uC-LIB \
 micrium/uCOS-III/Ports/Renesas/RX/RXC \
@@ -66,5 +67,9 @@ micrium/uCOS-III/Source \
 r_bsp/board/rdkrx63n \
 r_bsp/mcu/all \
 r_bsp/mcu/rx63n \
+r_cmt_rx/src \
+r_gpio_rx/src \
+r_gpio_rx/src/targets/rx63n \
 src \
+src/suart \
 
